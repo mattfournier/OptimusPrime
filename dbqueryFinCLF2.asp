@@ -1051,53 +1051,9 @@ function writeDisabledAuxiliaryLink(sType)
 end function
 
 sub writeHeader ()
-	response.write (vbTAB & MSG_INSTITUTIONAL_BANNER_STARTS(iLanguageID-1) & vbCRLF)
-	response.write (vbTAB & "<div class=""" & "banner" & """>" & vbCRLF)
-
-	' temporarily disable the line below
-	response.write (vbTAB & vbTAB & "<img src=" & chr(34) & CLF2imagesFolder & "lffl.gif" & chr(34) & " class=""lf pngfix"" height=""65"" width=""65"" alt="""" />" & vbCRLF)
-	' and use the line below instead
-'	response.write (vbTAB & vbTAB & "<img src=" & chr(34) & CLF2imagesFolder & "lffl.gif" & chr(34) & " height=""65"" width=""65"" alt="""" />" & vbCRLF)
-
-	response.write (vbTAB & vbTAB & "<p class=""main"">" & institutionName(iLanguageID-1) & "</p>" & vbCRLF)
-	response.write (vbTAB & vbTAB & "<p class=""siteuri"">" & Mid (rootWeb, 8) & "</p>" & vbCRLF)
-	response.write (vbTAB & "</div>" & vbCRLF)
-	response.write (vbTAB & MSG_INSTITUTIONAL_BANNER_ENDS(iLanguageID-1) & vbCRLF & vbCRLF)
-
-	response.write (vbTAB & MSG_SKIP_NAVIGATION_BEGINS(iLanguageID-1) & vbCRLF)
-	response.write (vbTAB & "<div class=""navaid"">" & vbCRLF)
-	response.write (vbTAB & vbTAB & "<a href=""#cont"">" & MSG_SKIP_TO_CONTENT(iLanguageID-1) & "</a> | " & vbCRLF)
-	response.write (vbTAB & vbTAB & "<a href=""#il"">" & MSG_SKIP_TO_INSTITUTIONAL_LINKS(iLanguageID-1) & "</a>" & vbCRLF)
-	response.write (vbTAB & "</div>" & vbCRLF)
-	response.write (vbTAB & MSG_SKIP_NAVIGATION_ENDS(iLanguageID-1) & vbCRLF & vbCRLF)
-
-	response.write (vbTAB & MSG_COMMON_MENU_BAR_BEGINS(iLanguageID-1) & vbCRLF)
-	response.write (vbTAB & "<div class=""fp"">" & vbCRLF)
-	response.write (vbTAB & vbTAB & MSG_COMMON_MENU_BAR_TITLE_BEGINS(iLanguageID-1) & vbCRLF)
-	response.write (vbTAB & vbTAB & "<h1 class=""navaid"">" & MSG_COMMON_MENU_BAR_LINKS(iLanguageID-1) & "</h1>" & vbCRLF)
-	response.write (vbTAB & vbTAB & MSG_COMMON_MENU_BAR_TITLE_ENDS(iLanguageID-1) & vbCRLF)
-
-	response.write (vbTAB & vbTAB & "<ul class=""commonbar"">" & vbCRLF)
-	response.write (vbTAB & vbTAB & vbTAB & MSG_LANGUAGE_LINK_BEGINS(iLanguageID-1) & vbCRLF)
-	response.write (vbTAB & vbTAB & vbTAB & writeAuxiliaryLink ("Language") & vbCRLF)
-	response.write (vbTAB & vbTAB & vbTAB & MSG_LANGUAGE_LINK_ENDS(iLanguageID-1) & vbCRLF)
-	response.write (vbTAB & vbTAB & vbTAB & writeAuxiliaryLink ("Home") & vbCRLF)
-	response.write (vbTAB & vbTAB & vbTAB & writeAuxiliaryLink ("Contact Us") & vbCRLF)
-	response.write (vbTAB & vbTAB & vbTAB & writeAuxiliaryLink ("Help") & vbCRLF)
-	response.write (vbTAB & vbTAB & vbTAB & writeAuxiliaryLink ("Search") & vbCRLF)
-	response.write (vbTAB & vbTAB & vbTAB & writeAuxiliaryLink ("GoC") & vbCRLF)
-	response.write (vbTAB & vbTAB & "</ul>" & vbCRLF)
-
-	response.write (vbTAB & "</div>" & vbCRLF)
-	response.Write ("<!-- </noindex> -->" & vbCRLF)
-	response.write (vbTAB & MSG_COMMON_MENU_BAR_ENDS(iLanguageID-1) & vbCRLF & vbCRLF)
-	response.write (vbTAB & MSG_HEADER_ENDS(iLanguageID-1) & vbCRLF & vbCRLF)
-
-	response.write (vbTAB & MSG_BREAD_CRUMB_BEGINS(iLanguageID-1) & vbCRLF & vbCRLF)
-
-    writeFinBreadCrumbs ()
-	response.write (vbTAB & MSG_BREAD_CRUMB_ENDS(iLanguageID-1) & vbCRLF & vbCRLF)
-end sub
+	%>
+		    	        <!-- #include virtual="/common/write-header-eng.htm" -->
+		    	<%
 
 sub writeFinBreadCrumbs ()
     response.Write ("<p class=""breadcrumb"">" & vbCRLF)
