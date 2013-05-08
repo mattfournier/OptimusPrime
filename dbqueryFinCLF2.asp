@@ -1259,11 +1259,8 @@ sub writePreContentDetails ()
 %>
     <!--#include virtual="/common/header.htm" -->
 <%
-	writeBodyTag ()
-	response.Write (MSG_HEADER_BEGINS(iLanguageID-1) & vbCRLF)
-	writeOpeningDivTags ()
     response.Write ("<!-- <noindex> -->" & vbCRLF)
-	call writeFIPHeader ()
+
 	if sView <> "printable" Then
 		if bDisableMainMenu = true then
 			writeDisabledHeader()
@@ -1272,8 +1269,6 @@ sub writePreContentDetails ()
 		end if
 	end if
 
-	' colLayout opening tag.  The corresponding closing tag is under the writeClosingTags module.
-	response.write ("<div class=""colLayout"">" & vbCRLF)
     if sView <> "printable" Then
 	    select case inumberOfColumns
 		    case 2
