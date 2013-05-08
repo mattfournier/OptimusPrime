@@ -4,11 +4,11 @@
 
 <%
 'declare variables
-dim sHOST 
+dim sHOST
 dim sPROTOCOL
 dim BodyTag
 dim sTitle (3)
-dim sHeadTitle (3) 
+dim sHeadTitle (3)
 dim sDisplayTitle (3)
 dim sDescription (3)
 dim sKeywords (3)
@@ -65,7 +65,7 @@ dim sPrevPart (3)
 dim sNextPart (3)
 dim sImportantNotices (3)
 dim sTableOfContents (3)
-dim sPrintableVersion (3) 
+dim sPrintableVersion (3)
 dim iPartCount (3)
 dim sBodyClass (3)
 dim searchrank(2)
@@ -78,15 +78,15 @@ dim sLinksData
 dim sClassInst
 dim sClassService
 dim resourceCreators ()
-dim resourcePresenters		
-dim resourceRelations		
+dim resourcePresenters
+dim resourceRelations
 dim resourceTopic
 dim bresourceData
 dim bresourceAudience
 dim bresourceMetaData
 dim bresourceCreators
-dim bresourcePresenters		
-dim bresourceRelations		
+dim bresourcePresenters
+dim bresourceRelations
 dim bresourceTopic
 dim bHideLine
 dim bGOCFIP
@@ -237,7 +237,7 @@ dim Img_GOC_FIP(3)
 dim Img_GOC_FIP_Printable(3)
 dim Img_noFIP (3)
 dim sPath
-dim TBSIMConnectionString 
+dim TBSIMConnectionString
 dim TBSIMconn
 dim TBSIMcm
 dim TBSIMRS
@@ -248,7 +248,7 @@ dim numrows
 dim colcounter
 dim rowcounter
 dim thisfield
-dim sQueryString 
+dim sQueryString
 dim sAltLangQueryString
 dim sScriptsVar
 dim sString
@@ -306,9 +306,9 @@ sPoliciesFile (1) = "/admin/policies-politiques-fra"
 sSiteMapFile (0) = "/admin/map-carte-eng"
 sSiteMapFile (1) = "/admin/map-carte-fra"
 institutionName(0) = "Department of Finance Canada"
-institutionName(1) = "Ministère des Finances Canada"	
-Msg_TableOfContents (0) = "Table of Contents" 
-Msg_TableOfContents (1) = "Table des matières" 
+institutionName(1) = "Ministère des Finances Canada"
+Msg_TableOfContents (0) = "Table of Contents"
+Msg_TableOfContents (1) = "Table des matières"
 MSG_Versions(0) = "Versions: "
 MSG_Versions(1) = "Versions : "
 altPrintClass(0) = "altPrint"
@@ -319,18 +319,18 @@ backBannerDocumentOpenDiv = ""
 backBannerMainCloseDiv = ""
 
 rootWeb = FINRoot
-cssFolder = "/css/"	
+cssFolder = "/css/"
 styleFolder = "/css/"
-imagesFolder  = "/images/"	
-CLF2imagesFolder  = "/images/"		
+imagesFolder  = "/images/"
+CLF2imagesFolder  = "/images/"
 fipImage(0) = "/images/finfipe.gif"
-fipImage(1) = "/images/finfipf.gif"	
+fipImage(1) = "/images/finfipf.gif"
 sInstructionsLink(0) = "/admin/instruction-eng.asp"
-sInstructionsLink(1) = "/admin/instruction-fra.asp"    
+sInstructionsLink(1) = "/admin/instruction-fra.asp"
 bannerClass(0) = "banner"
 bannerClass(1) = "banner"
-sCreator(0) = "Government of Canada, Department of Finance" 
-sCreator(1) = "Gouvernement du Canada, Ministère des finances" 
+sCreator(0) = "Government of Canada, Department of Finance"
+sCreator(1) = "Gouvernement du Canada, Ministère des finances"
 
 MSG_CLF_VERSION(0) = "<!-- CLF 2.0 TEMPLATE VERSION 1.04 | VERSION 1.04 DU GABARIT NSI 2.0 -->"
 MSG_CLF_VERSION(1) = "<!-- VERSION 1.04 DU GABARIT NSI 2.0 | CLF 2.0 TEMPLATE VERSION 1.04  -->"
@@ -448,13 +448,13 @@ MSG_Institutional_Links(1) = "Liens institutionnels"
 MSG_LanguageTitle(0) = "Français - Version française de cette page"
 MSG_LanguageTitle(1) = "English - English version of the Web page"
 MSG_HomeTitle(0) = "Home - The main page of the " & institutionName (0) & " Web site"
-MSG_HomeTitle(1) = "Accueil - Page principale du site Web du " & institutionName (1) 
+MSG_HomeTitle(1) = "Accueil - Page principale du site Web du " & institutionName (1)
 MSG_ContactUsTitle(0) = "Contact Us - " & institutionName (0) & " contact information"
 MSG_ContactUsTitle(1) = "Contactez-nous - Communiquez avec nous"
 MSG_HelpTitle(0) = "Help - Information about using the " & institutionName (0) & " Web site"
-MSG_HelpTitle(1) = "Aide - Renseignements sur la façon d'utiliser le site Web du " & institutionName (1) 
+MSG_HelpTitle(1) = "Aide - Renseignements sur la façon d'utiliser le site Web du " & institutionName (1)
 MSG_SearchTitle(0) = "Search - Search the " & institutionName (0) & " Web site"
-MSG_SearchTitle(1) = "Recherche - Recherche dans le site Web du " & institutionName (1) 
+MSG_SearchTitle(1) = "Recherche - Recherche dans le site Web du " & institutionName (1)
 MSG_CanadaSiteTitle(0) = "canada.gc.ca - Government of Canada Web site"
 MSG_CanadaSiteTitle(1) = "canada.gc.ca - Site Web du gouvernement du Canada"
 
@@ -462,17 +462,17 @@ Msg_Unavailable (0) = "<h3>The document you are trying to access is not yet avai
 Msg_Unavailable (1) = "<h3>Le document que vous essayez d'accéder n'est pas encore disponible.</h3>"
 Msg_Unavailable (2) = "<h3>The document you are trying to access is not yet available - Spanish.</h3>"
 
-Msg_Archived (0) = "<h3>This document has been archived.</h3>" 
-Msg_Archived (1) = "<h3>Ce document a été archivé.</h3>" 
-Msg_Archived (2) = "<h3>This document has been archived. - Spanish</h3>" 
+Msg_Archived (0) = "<h3>This document has been archived.</h3>"
+Msg_Archived (1) = "<h3>Ce document a été archivé.</h3>"
+Msg_Archived (2) = "<h3>This document has been archived. - Spanish</h3>"
 
-Msg_PreviousPart (0) = "Previous" 
-Msg_PreviousPart (1) = "Précédent" 
-Msg_PreviousPart (2) = "Anterior" 
+Msg_PreviousPart (0) = "Previous"
+Msg_PreviousPart (1) = "Précédent"
+Msg_PreviousPart (2) = "Anterior"
 
-Msg_NextPart (0) = "Next" 
-Msg_NextPart (1) = "Suivant" 
-Msg_NextPart (2) = "Después" 
+Msg_NextPart (0) = "Next"
+Msg_NextPart (1) = "Suivant"
+Msg_NextPart (2) = "Después"
 
 Msg_Part1 (0) = " - Part "
 Msg_Part1 (1) = " - Partie "
@@ -508,7 +508,7 @@ Msg_Modified(1) = "Date de modification: "
 
 Msg_PrintableVersion (0) = "Print Version"
 Msg_PrintableVersion (1) = "Version imprimable"
-Msg_PrintableVersion (2) =  "Print Version" 
+Msg_PrintableVersion (2) =  "Print Version"
 
 Msg_Top (0) = "Top of Page"
 Msg_Top (1) = "Haut de la page"
@@ -603,7 +603,7 @@ Const NJC_DIRECTIVE   = "93"
 
 iGOCService="152"
 
-' assign the default weight of 2000 to each document.  The possible values 
+' assign the default weight of 2000 to each document.  The possible values
 ' are 0,1000,2000,3000,4000
 
 searchrank(0) = 2000
@@ -654,7 +654,7 @@ sub writeRelationsMetaData (name, content1, content2)
 		response.write (vbTAB & "<meta name=" & chr(34) & name & chr(34) & " content=" & chr(34) & content1 & " " & content2 & chr(34) & " />"  & vbCRLF)
 	end if
 end sub
-	
+
 sub CloseAll (TBSIMRS)
 	Call CloseRecordSet (TBSIMRS)
 	Call CloseDB ()
@@ -679,7 +679,7 @@ end sub
 Function getAllResourceInfo ()
 dim TBSIMcm
 
-    Set TBSIMcm = Server.CreateObject ("ADODB.Command")	
+    Set TBSIMcm = Server.CreateObject ("ADODB.Command")
     TBSIMcm.ActiveConnection = TBSIMconn
     TBSIMcm.commandtype= adCmdStoredProc
     TBSIMcm.CommandText = "usp_getAllResourceData"
@@ -688,7 +688,7 @@ dim TBSIMcm
     set TBSIMRS = TBSIMcm.execute
     if not (TBSIMRS.BOF and TBSIMRS.EOF) then
 		resourceData=TBSIMRS.getrows ()
-        bresourceData = True		
+        bresourceData = True
 		getAllResourceInfo = 1
     else
 		getAllResourceInfo = -1
@@ -700,23 +700,23 @@ sub getResourceLinkInfo (sServiceAbbr)
 	dim TBSIMRS2
 	dim TBSIMconn
 	dim ServiceData
-	
+
 	Set TBSIMconn = Server.CreateObject ("ADODB.Connection")
 	TBSIMconn.ConnectionString = TBSIMConnectionString
 	TBSIMconn.Open
-	
+
 	Set TBSIMRS2 = Server.CreateObject("ADODB.Recordset")
-	
-	Set TBSIMcm = Server.CreateObject ("ADODB.Command")	
+
+	Set TBSIMcm = Server.CreateObject ("ADODB.Command")
 	TBSIMcm.ActiveConnection = TBSIMconn
 	TBSIMcm.commandtype= adCmdStoredProc
 	TBSIMcm.CommandText = "usp_checkServiceLinks"
-	
+
 	TBSIMcm.Parameters.append TBSIMcm.createparameter("@serviceAbbr",advarchar,adparamInput,100,sServiceAbbr)
 	TBSIMcm.Parameters.append TBSIMcm.createparameter("@domain",advarchar,adparamInput,100,swapToProductionURL(serviceDomain))
-	
+
 	set TBSIMRS2 = TBSIMcm.execute
-	
+
 	if not (TBSIMRS2.BOF and TBSIMRS2.EOF) then
 		sLinksData=TBSIMRS2.GetRows()
 		if sServiceAbbr = "hrmm-mgrh" then
@@ -733,16 +733,17 @@ end sub
 
 sub writeW3Ccode ()
 	if iLanguageID = 1 Then
-		response.write (vbCRLF & "<html xmlns=" & chr(34) & "http://www.w3.org/1999/xhtml" & chr(34) & " xml:lang=" & chr(34) & "en" & chr(34) & " lang=" & chr(34) & "en" & chr(34) & ">" & VbCRLF)
+		response.write (vbCRLF & "<html lang=" & chr(34) & "en" & chr(34) & ">" & VbCRLF)
+
 	elseif iLanguageID = 2 Then
-		response.write (vbCRLF & "<html xmlns=" & chr(34) & "http://www.w3.org/1999/xhtml" & chr(34) & " xml:lang=" & chr(34) & "fr" & chr(34) & " lang=" & chr(34) & "fr" & chr(34) & ">" & VbCRLF)
+		response.write (vbCRLF & "<html lang=" & chr(34) & "fr" & chr(34) & ">" & VbCRLF)
 	end if
 end sub
 
 sub getResourceData ()
 	numcols=ubound(resourceData,1)
 	numrows=ubound(resourceData,2)
-							
+
 	iResourceID     = resourceData(0,0)
 	if iLanguageID = "" Then
 		iLanguageID  = resourceData(1,0)
@@ -765,13 +766,13 @@ end sub
 sub getResourceTopics ()
 	if bresourceTopic = True Then
 		inumTopics = 0
-	
+
 		While inumTopics < iTotalTopics
 			thisfield=resourceTopics(inumTopics )(0,1)
 			numcols=ubound(resourceTopics(inumTopics ),1)
 			numrows=ubound(resourceTopics(inumTopics),2)
 
-			for rowcounter= 0 TO numrows	
+			for rowcounter= 0 TO numrows
 				iLang = resourceTopics (inumTopics)(0,rowcounter)
 				thisfield=resourceTopics(inumTopics)(1,rowcounter)
 
@@ -782,7 +783,7 @@ sub getResourceTopics ()
 			next
 			inumTopics = inumTopics + 1
 		Wend
-	end if		
+	end if
 end sub
 
 sub getResourceMetaTags ()
@@ -794,28 +795,28 @@ sub getResourceMetaTags ()
 				iLang = resourceMetadata(0,rowcounter)
 				thisfield=resourceMetadata(1,rowcounter)
 				Select Case thisfield
-					case "audience"					
+					case "audience"
 						if sAudience (iLang-1) = "" Then
 							sAudience (iLang-1) = resourceMetadata(2,rowcounter)
 						else
 							sAudience (iLang-1) = sAudience (iLang-1) & ", " & resourceMetadata(2,rowcounter)
-						end if		
-					case "SwitchLanguageButton"					
+						end if
+					case "SwitchLanguageButton"
 						sLanguage (iLang-1) = resourceMetadata (2,rowcounter)
-					case "title"					
+					case "title"
 						if sLocalTitle <> "" Then
 							sTitle (iLang-1) = sLocalTitle
 						else
 							sTitle (iLang-1) = resourceMetadata (2,rowcounter)
 						end if
 					case "description"
-						sDescription (iLang-1) = resourceMetadata (2,rowcounter)					
+						sDescription (iLang-1) = resourceMetadata (2,rowcounter)
 					case "keyword"
 						if (sKeywords (iLang-1)  <> EMPTY) then
 							sKeywords (iLang-1) = sKeywords (iLang-1) & ", " & resourceMetadata (2,rowcounter)
 						else
 							sKeywords (iLang-1) = resourceMetadata (2,rowcounter)
-						end if					
+						end if
 					case "isPartOf"
 						sisPartOf (iLang-1) = resourceMetadata (2,rowcounter)
 					case "isBasedOn"
@@ -826,7 +827,7 @@ sub getResourceMetaTags ()
 						sdocCategory (iLang-1) = resourceMetadata (2,rowcounter)
 					case "docTypeID"
 						idocTypeID (0) = resourceMetadata (2,rowcounter)
-						idocTypeID (1) = resourceMetadata (2,rowcounter)	
+						idocTypeID (1) = resourceMetadata (2,rowcounter)
 					case "docType"
 						sdocType (iLang-1) = resourceMetadata (2,rowcounter)
 					case "ContactUs"
@@ -856,15 +857,15 @@ sub getResourceMetaTags ()
 						sService (iLang-1) = resourceMetadata (2,rowcounter)
 					case "ServiceID"
 						iServiceID (iLang-1) = resourceMetadata (2,rowcounter)
-					case "activity"					
+					case "activity"
 						if sActivity (iLang-1) = "" Then
 							sActivity (iLang-1) = resourceMetadata(2,rowcounter)
 						else
 							sActivity (iLang-1) = sActivity (iLang-1) & ", " & resourceMetadata(2,rowcounter)
-						end if		
-					case "FormatID"					
+						end if
+					case "FormatID"
 						iFormatID (iLang-1) = resourceMetaData(2,rowcounter)
-					case "Formats"					
+					case "Formats"
 						sFormatURLs(iNumFormats, iLang-1) = resourceMetaData(2,rowcounter)
 						if InStr (sFormatURLs(iNumFormats, iLang-1), sWebType) Then
 							sFormatURLs(iNumFormats, iLang-1) = swapFromProductionURL (resourceMetaData(2,rowcounter))
@@ -872,26 +873,26 @@ sub getResourceMetaTags ()
 						else
 							sFormatURLs(iNumFormats, iLang-1) = ""
 						end if
-					case "PartNo"					
+					case "PartNo"
 						iPartNo (iLang-1) = resourceMetaData(2,rowcounter)
-					case "Format"					
+					case "Format"
 						smmFormats (iLang-1) = resourceMetaData(2,rowcounter)
-					case "RdimS"					
+					case "RdimS"
 						iRdimS (iLang-1) = resourceMetaData(2,rowcounter)
-					case "LiveOnProduction"	
-						bAlive = True		
+					case "LiveOnProduction"
+						bAlive = True
 					case "prevPart"
 						sPrevPart (iLang-1) = swapFromProductionURL (resourceMetaData(2,rowcounter))
-					case "nextPart"		
+					case "nextPart"
 						sNextPart (iLang-1) = swapFromProductionURL (resourceMetaData(2,rowcounter))
-					case "ImportantNotices"		
+					case "ImportantNotices"
 						sImportantNotices (iLang-1)  = resourceMetaData(2,rowcounter)
-					case "TableOfContents"		
+					case "TableOfContents"
 						sTableOfContents (iLang-1)  = resourceMetaData(2,rowcounter)
 						if InStr (sTableOfContents (iLang-1), ".gc.ca") Then
 							sTableOfContents (iLang-1) = Mid(sTableOfContents (iLang-1),InStr(1,sTableOfContents (iLang-1),".gc.ca",vbTextCompare)+6)
 						end if
-					case "partCount"		
+					case "partCount"
 						iPartCount (iLang-1)  = resourceMetaData(2,rowcounter)
 					case "PrintableVersion"
 						sPrintableVersion (iLang-1) = resourceMetaData(2,rowcounter)
@@ -910,14 +911,14 @@ sub getResourceMetaTags ()
 				end Select
 			NEXT
 	'	NEXT
-	end if		
+	end if
 end sub
-	
+
 sub writeResourceMetaTags ()
-	if iLanguageID > 3 Then 
+	if iLanguageID > 3 Then
 		iLanguageID = 1
 	end if
-	
+
 	if iLanguageID = 1 Then
 		response.write (vbTAB & "<meta name=" & chr(34) & "dc.language" & chr(34) & " scheme=" & chr(34) & "ISO639-2" & chr(34) & " content=" & chr(34) & "eng" & chr(34) & " />" & vbCRLF)
 	elseif iLanguageID = 2 Then
@@ -934,34 +935,34 @@ sub writeResourceMetaTags ()
 	    do While i < iTotalTopics-1
 		    if (ssubjects(i,(iLanguageID-1)) <> EMPTY) Then
 			    response.write ssubjects(i,(iLanguageID-1)) & ";"
-		    end if	
+		    end if
 		    i = i + 1
-	    loop	
+	    loop
 		if (ssubjects(i,(iLanguageID-1)) <> EMPTY) Then
 			response.write ssubjects(i,(iLanguageID-1))
-		end if	
+		end if
         response.write chr(34) & " />" & vbCRLF
 	else
         response.write vbTAB & "<meta name=" & chr(34) & "dc.subject" & chr(34) & " scheme=" & chr(34) & "gcfin" & chr(34) & " content=" & chr(34)
         response.write sTitle((iLanguageID-1)) & chr(34)
-        response.write " />" & vbCRLF        
+        response.write " />" & vbCRLF
 	end if
-	
+
 	Call writeMetaData ( "dc.description", sDescription (iLanguageID-1))
 	Call writeMetaData ( "description", sDescription (iLanguageID-1))
 	Call writeMetaData ( "keywords",  sKeywords(iLanguageID-1))
 	Call writeMetaData ( "dc.type",  sdocType(iLanguageID-1))
-		
+
 	if sRobots (iLanguageID-1) <> EMPTY Then
-		Call writeMetaData ( "robots", sRobots (iLanguageID-1))	
+		Call writeMetaData ( "robots", sRobots (iLanguageID-1))
 	end if
 	if (iRdimS(iLanguageID-1)<> "" AND iRdimS(iLanguageID-1)<> " ") Then
-		Call writeMetaData ( "dc.source", iRdimS(iLanguageID-1))	
+		Call writeMetaData ( "dc.source", iRdimS(iLanguageID-1))
 	end if
-	Call writeMetaData ( "partNo", iPartNo(iLanguageID-1))	
-	Call writeMetaData ( "service", sService(0))	
+	Call writeMetaData ( "partNo", iPartNo(iLanguageID-1))
+	Call writeMetaData ( "service", sService(0))
 	Call writeMetaData ( "LiveOnProduction",  bAlive)
-    Call writeMetaData ( "searchrank", searchrank(iLanguageID-1))		
+    Call writeMetaData ( "searchrank", searchrank(iLanguageID-1))
 end sub
 
 Function getLanguageSuffix ()
@@ -977,7 +978,7 @@ end Function
 
 Function writeAuxiliaryLink (sType)
 	dim sLang
-	
+
 	Select Case sType
 		Case "Language"
             if (iLanguageID=2) then
@@ -989,8 +990,8 @@ Function writeAuxiliaryLink (sType)
             if (sQueryString <> "") Then
                 writeAuxiliaryLink = writeAuxiliaryLink & "?" & sQueryString
             end if
-            writeAuxiliaryLink = writeAuxiliaryLink & """ lang=""" & CLF2AltlanguageAcronym & """ xml:lang=""" & CLF2AltlanguageAcronym & """ title=""" & MSG_LanguageTitle(iLanguageID-1) & """>" & MSG_LanguageButton(iLanguageID-1) & "</a></div></li>"        
-		Case "Home"									
+            writeAuxiliaryLink = writeAuxiliaryLink & """ lang=""" & CLF2AltlanguageAcronym & """ xml:lang=""" & CLF2AltlanguageAcronym & """ title=""" & MSG_LanguageTitle(iLanguageID-1) & """>" & MSG_LanguageButton(iLanguageID-1) & "</a></div></li>"
+		Case "Home"
 			writeAuxiliaryLink = "<li class=""fiptext""><div><a href=""" & sHomeLink (iLanguageID-1) & """ title=""" & MSG_HomeTitle(iLanguageID-1) & """>" & MSG_HomePage(iLanguageID-1) & "</a></div></li>"
 		Case "Contact Us"
 			if sContactUs (iLanguageID-1) <> "" Then
@@ -999,7 +1000,7 @@ Function writeAuxiliaryLink (sType)
                 sContactUs (iLanguageID-1) = sContactUsFile(iLanguageID-1) & ".asp"
 				writeAuxiliaryLink = "<li class=""fiptextc""><div><a href=" & chr(34) & sContactUs (iLanguageID-1) & """ title=""" & MSG_ContactUsTitle(iLanguageID-1) & """>" & MSG_ContactUsButton(iLanguageID-1) & "</a></div></li>"
 			end if
-				
+
 		Case "Help"
 			if sHelp (iLanguageID-1) <> "" Then
 				writeAuxiliaryLink = "<li class=""fiptext""><div><a href=""" & sHelp(iLanguageID-1) & """ title=""" & MSG_HelpTitle(iLanguageID-1) & """>" & MSG_HelpButton(iLanguageID-1) & "</a></div></li>"
@@ -1009,8 +1010,8 @@ Function writeAuxiliaryLink (sType)
 			end if
 
 		Case "Search"
-            sSearchLink (iLanguageID-1) = sSearchDomain & "/query-recherche-" & sLanguageSuffix & ".aspx?lang=" & sLangParameter                
-			writeAuxiliaryLink = "<li class=""fiptext""><div><a href=""" & sSearchLink (iLanguageID-1) & """ title=""" & MSG_SearchTitle(ILanguageID-1) & """>" & MSG_SearchButton(iLanguageID-1) & "</a></div></li>"				
+            sSearchLink (iLanguageID-1) = sSearchDomain & "/query-recherche-" & sLanguageSuffix & ".aspx?lang=" & sLangParameter
+			writeAuxiliaryLink = "<li class=""fiptext""><div><a href=""" & sSearchLink (iLanguageID-1) & """ title=""" & MSG_SearchTitle(ILanguageID-1) & """>" & MSG_SearchButton(iLanguageID-1) & "</a></div></li>"
 		Case "GoC"
 			Select Case iLanguageID
 				Case 1
@@ -1031,37 +1032,37 @@ function writeDisabledAuxiliaryLink(sType)
 		Case "Language"
 			writeDisabledAuxiliaryLink= "<li class=""fiptexta""><div>" & MSG_LanguageButton(iLanguageID-1) & "</div></li>"
 
-		Case "Home"									
+		Case "Home"
 			writeDisabledAuxiliaryLink= "<li class=""fiptext""><div>" & MSG_HomePage(iLanguageID-1) & "</div></li>"
-			
+
 		Case "Contact Us"
 			writeDisabledAuxiliaryLink= "<li class=""fiptextc""><div>" & MSG_ContactUsButton(iLanguageID-1) & "</div></li>"
-			
+
 		Case "Help"
-			writeDisabledAuxiliaryLink= "<li class=""fiptext""><div>" & MSG_HelpButton(iLanguageID-1) & "</div></li>"				
-				
+			writeDisabledAuxiliaryLink= "<li class=""fiptext""><div>" & MSG_HelpButton(iLanguageID-1) & "</div></li>"
+
 		Case "Search"
-			writeDisabledAuxiliaryLink= "<li class=""fiptext""><div>" & MSG_SearchButton(iLanguageID-1) & "</div></li>"				
-			
+			writeDisabledAuxiliaryLink= "<li class=""fiptext""><div>" & MSG_SearchButton(iLanguageID-1) & "</div></li>"
+
 		Case "GoC"
 			sCellText = "canada.gc.ca"
-			writeDisabledAuxiliaryLink= "<li class=""fiptextb""><div>" & sCellText  & "</div></li>"						
+			writeDisabledAuxiliaryLink= "<li class=""fiptextb""><div>" & sCellText  & "</div></li>"
 	end select
 end function
 
 sub writeHeader ()
 	response.write (vbTAB & MSG_INSTITUTIONAL_BANNER_STARTS(iLanguageID-1) & vbCRLF)
 	response.write (vbTAB & "<div class=""" & "banner" & """>" & vbCRLF)
-	
+
 	' temporarily disable the line below
 	response.write (vbTAB & vbTAB & "<img src=" & chr(34) & CLF2imagesFolder & "lffl.gif" & chr(34) & " class=""lf pngfix"" height=""65"" width=""65"" alt="""" />" & vbCRLF)
 	' and use the line below instead
 '	response.write (vbTAB & vbTAB & "<img src=" & chr(34) & CLF2imagesFolder & "lffl.gif" & chr(34) & " height=""65"" width=""65"" alt="""" />" & vbCRLF)
-	
+
 	response.write (vbTAB & vbTAB & "<p class=""main"">" & institutionName(iLanguageID-1) & "</p>" & vbCRLF)
 	response.write (vbTAB & vbTAB & "<p class=""siteuri"">" & Mid (rootWeb, 8) & "</p>" & vbCRLF)
 	response.write (vbTAB & "</div>" & vbCRLF)
-	response.write (vbTAB & MSG_INSTITUTIONAL_BANNER_ENDS(iLanguageID-1) & vbCRLF & vbCRLF) 
+	response.write (vbTAB & MSG_INSTITUTIONAL_BANNER_ENDS(iLanguageID-1) & vbCRLF & vbCRLF)
 
 	response.write (vbTAB & MSG_SKIP_NAVIGATION_BEGINS(iLanguageID-1) & vbCRLF)
 	response.write (vbTAB & "<div class=""navaid"">" & vbCRLF)
@@ -1074,7 +1075,7 @@ sub writeHeader ()
 	response.write (vbTAB & "<div class=""fp"">" & vbCRLF)
 	response.write (vbTAB & vbTAB & MSG_COMMON_MENU_BAR_TITLE_BEGINS(iLanguageID-1) & vbCRLF)
 	response.write (vbTAB & vbTAB & "<h1 class=""navaid"">" & MSG_COMMON_MENU_BAR_LINKS(iLanguageID-1) & "</h1>" & vbCRLF)
-	response.write (vbTAB & vbTAB & MSG_COMMON_MENU_BAR_TITLE_ENDS(iLanguageID-1) & vbCRLF)	
+	response.write (vbTAB & vbTAB & MSG_COMMON_MENU_BAR_TITLE_ENDS(iLanguageID-1) & vbCRLF)
 
 	response.write (vbTAB & vbTAB & "<ul class=""commonbar"">" & vbCRLF)
 	response.write (vbTAB & vbTAB & vbTAB & MSG_LANGUAGE_LINK_BEGINS(iLanguageID-1) & vbCRLF)
@@ -1085,17 +1086,17 @@ sub writeHeader ()
 	response.write (vbTAB & vbTAB & vbTAB & writeAuxiliaryLink ("Help") & vbCRLF)
 	response.write (vbTAB & vbTAB & vbTAB & writeAuxiliaryLink ("Search") & vbCRLF)
 	response.write (vbTAB & vbTAB & vbTAB & writeAuxiliaryLink ("GoC") & vbCRLF)
-	response.write (vbTAB & vbTAB & "</ul>" & vbCRLF) 
+	response.write (vbTAB & vbTAB & "</ul>" & vbCRLF)
 
 	response.write (vbTAB & "</div>" & vbCRLF)
 	response.Write ("<!-- </noindex> -->" & vbCRLF)
-	response.write (vbTAB & MSG_COMMON_MENU_BAR_ENDS(iLanguageID-1) & vbCRLF & vbCRLF)  
-	response.write (vbTAB & MSG_HEADER_ENDS(iLanguageID-1) & vbCRLF & vbCRLF)  
-	
+	response.write (vbTAB & MSG_COMMON_MENU_BAR_ENDS(iLanguageID-1) & vbCRLF & vbCRLF)
+	response.write (vbTAB & MSG_HEADER_ENDS(iLanguageID-1) & vbCRLF & vbCRLF)
+
 	response.write (vbTAB & MSG_BREAD_CRUMB_BEGINS(iLanguageID-1) & vbCRLF & vbCRLF)
 
     writeFinBreadCrumbs ()
-	response.write (vbTAB & MSG_BREAD_CRUMB_ENDS(iLanguageID-1) & vbCRLF & vbCRLF)  
+	response.write (vbTAB & MSG_BREAD_CRUMB_ENDS(iLanguageID-1) & vbCRLF & vbCRLF)
 end sub
 
 sub writeFinBreadCrumbs ()
@@ -1126,7 +1127,7 @@ sub WriteDisabledHeader()
 	response.write (vbTAB & vbTAB & "<p class=""main"">" & institutionName(iLanguageID-1) & "</p>" & vbCRLF)
 	response.write (vbTAB & vbTAB & "<p class=""siteuri"">" & Mid (HRMAroot, 8) & "</p>" & vbCRLF)
 	response.write (vbTAB & "</div>" & vbCRLF)
-	response.write (vbTAB & MSG_INSTITUTIONAL_BANNER_ENDS(iLanguageID-1) & vbCRLF & vbCRLF) 
+	response.write (vbTAB & MSG_INSTITUTIONAL_BANNER_ENDS(iLanguageID-1) & vbCRLF & vbCRLF)
 
 	response.write (vbTAB & MSG_SKIP_NAVIGATION_BEGINS(iLanguageID-1) & vbCRLF)
 	response.write (vbTAB & "<div class=""navaid"">" & vbCRLF)
@@ -1139,7 +1140,7 @@ sub WriteDisabledHeader()
 	response.write (vbTAB & "<div class=""fp"">" & vbCRLF)
 	response.write (vbTAB & vbTAB & MSG_COMMON_MENU_BAR_TITLE_BEGINS(iLanguageID-1) & vbCRLF)
 	response.write (vbTAB & vbTAB & "<h1 class=""navaid"">" & MSG_COMMON_MENU_BAR_LINKS(iLanguageID-1) & "</h1>" & vbCRLF)
-	response.write (vbTAB & vbTAB & MSG_COMMON_MENU_BAR_TITLE_ENDS(iLanguageID-1) & vbCRLF)	
+	response.write (vbTAB & vbTAB & MSG_COMMON_MENU_BAR_TITLE_ENDS(iLanguageID-1) & vbCRLF)
 
 	response.write (vbTAB & vbTAB & "<ul class=""commonbar"">" & vbCRLF)
 	response.write (vbTAB & vbTAB & vbTAB & writedisabledAuxiliaryLink ("Language") & vbCRLF)
@@ -1148,12 +1149,12 @@ sub WriteDisabledHeader()
 	response.write (vbTAB & vbTAB & vbTAB & writedisabledAuxiliaryLink ("Help") & vbCRLF)
 	response.write (vbTAB & vbTAB & vbTAB & writedisabledAuxiliaryLink ("Search") & vbCRLF)
 	response.write (vbTAB & vbTAB & vbTAB & writedisabledAuxiliaryLink ("GoC") & vbCRLF)
-	response.write (vbTAB & vbTAB & "</ul>" & vbCRLF) 
+	response.write (vbTAB & vbTAB & "</ul>" & vbCRLF)
 	response.write (vbTAB & "</div>" & vbCRLF)
-	response.write (vbTAB & MSG_COMMON_MENU_BAR_ENDS(iLanguageID-1) & vbCRLF & vbCRLF)  
-	response.write (vbTAB & MSG_HEADER_ENDS(iLanguageID-1) & vbCRLF & vbCRLF)  
+	response.write (vbTAB & MSG_COMMON_MENU_BAR_ENDS(iLanguageID-1) & vbCRLF & vbCRLF)
+	response.write (vbTAB & MSG_HEADER_ENDS(iLanguageID-1) & vbCRLF & vbCRLF)
 	response.write (vbTAB & MSG_BREAD_CRUMB_BEGINS(iLanguageID-1) & vbCRLF & vbCRLF)
-	response.write (vbTAB & MSG_BREAD_CRUMB_ENDS(iLanguageID-1) & vbCRLF & vbCRLF)  
+	response.write (vbTAB & MSG_BREAD_CRUMB_ENDS(iLanguageID-1) & vbCRLF & vbCRLF)
 end sub
 
 sub writeFIPHeader ()
@@ -1162,7 +1163,7 @@ sub writeFIPHeader ()
 	response.write ("<img src=""" & fipImage(iLanguageID-1) & """ width=""317"" height=""20"" alt=""" & Msg_GOC(iLanguageID-1) & """ /></a></div>" & vbCRLF)
 	response.write (vbTAB & "<div class=""cwm""><img src=" & chr(34) & CLF2imagesFolder & "wmms.gif" & chr(34) & " width=""83"" height=""20"" alt=""" & Msg_SymbolGOC(iLanguageID-1) & """ /></div>" & vbCRLF)
 	response.write (vbTAB & MSG_FIP_HEADER_ENDS(iLanguageID-1) & vbCRLF & vbCRLF)
-end sub		
+end sub
 '***********************************************************************************
 ' check if & how nonTBSFIP, GOCFIP are to be displayed under CLF 2.0
 '***********************************************************************************
@@ -1172,13 +1173,13 @@ sub writePrintableHeader ()
 	response.write "<tr>" &  vbCRLF
 	response.write "<td width='8'>&nbsp;" &  vbCRLF
 	response.write "</td>" &  vbCRLF
-	
-	response.write "<td width='40'><p align='right'><img src='/images/clf/canada_flag.gif' alt='" & Msg_Flag (iLanguageID-1) & "' width='40' height='20'></p>" &  vbCRLF	
+
+	response.write "<td width='40'><p align='right'><img src='/images/clf/canada_flag.gif' alt='" & Msg_Flag (iLanguageID-1) & "' width='40' height='20'></p>" &  vbCRLF
 	response.write "</td>" &  vbCRLF
 	response.write "<td width='18'>" &  vbCRLF
 	response.write "<img src='/images/clf/blank.gif' width='17' height='1' alt=" & chr(34) & chr(34) & " border='0'>" & vbCRLF
 	response.write "</td>" &  vbCRLF
-	response.write "<td width='450'><img src='" & Img_noFIP(iLanguageID-1) & "' alt='" & MSG_FIN(iLanguageID-1) & "'>" & vbCRLF		
+	response.write "<td width='450'><img src='" & Img_noFIP(iLanguageID-1) & "' alt='" & MSG_FIN(iLanguageID-1) & "'>" & vbCRLF
 	response.write "</td>" &  vbCRLF
 
 	response.write "</tr>" &  vbCRLF
@@ -1200,7 +1201,7 @@ sub writeFooter ()
 <%
     else
 %>
-        <!-- #include virtual="/common/footer-eng.htm" -->       
+        <!-- #include virtual="/common/footer-eng.htm" -->
 <%
     end if
 
@@ -1247,11 +1248,11 @@ sub writePreContentDetails ()
 		sClassService="serviceOld"
 	else
 		sClassInst="inst"
-		sClassService="service"		
+		sClassService="service"
 	end if
 
 		sClassInst="inst"
-		sClassService="service"		
+		sClassService="service"
 
 	response.write ("<!-- RESID = " & iResourceID & " -->")
 	writeW3Ccode ()
@@ -1275,14 +1276,11 @@ sub writePreContentDetails ()
 	response.write ("<div class=""colLayout"">" & vbCRLF)
     if sView <> "printable" Then
 	    select case inumberOfColumns
-		    case 1
-			    ' no left side menu if inumberOfColumns=1
 		    case 2
-			    response.write (vbTAB & MSG_TWO_COLUMN_LAYOUT_BEGINS(iLanguageID-1) & vbCRLF)	
-			    response.write (vbTAB & MSG_LEFT_SIDE_MENU_BEGINS(iLanguageID-1) & vbCRLF)
-			    ' left opening tag.  The corresponding closing tag is under the writeTableCells module.
-			    response.write (vbTAB & "<div class=""left"">" & vbCRLF)
-			    response.write (vbTAB & "<h1 class=""navaid""><a name=""il"" id=""il"">" & MSG_Institutional_Links(iLanguageID-1) & "</a></h1>" & vbCRLF)
+		    	%>
+		    	        <!-- #include virtual="/common/left-nav-eng.htm" -->
+		    	<%
+
 				if sDomainType <> "hrma" AND bresourceServicePagedata Then
 				    if bDisableServiceLink = true then
 					    writeDisabledServiceHomePageLink ()
@@ -1290,27 +1288,14 @@ sub writePreContentDetails ()
 					    writeServiceHomePageLink ()
 				    end if
     			end if
-    	    case 3
-			    response.write (vbTAB & MSG_THREE_COLUMN_LAYOUT_BEGINS(iLanguageID-1) & vbCRLF)	
-			    response.write (vbTAB & MSG_LEFT_SIDE_MENU_BEGINS(iLanguageID-1) & vbCRLF)
-			    ' left opening tag.  The corresponding closing tag is under the writeTableCells module.
-			    response.write (vbTAB & "<div class=""left"">" & vbCRLF)
-			    response.write (vbTAB & "<h1 class=""navaid""><a name=""il"" id=""il"">" & MSG_Institutional_Links(iLanguageID-1) & "</a></h1>" & vbCRLF)
-				if sDomainType <> "hrma" AND bresourceServicePagedata Then
-				    if bDisableServiceLink = true then
-					    writeDisabledServiceHomePageLink ()
-				    else
-					    writeServiceHomePageLink ()
-				    end if
-	    		end if		    
 	    end select
     end if
-        
+
 end sub
 
 sub writeTitle ()
 	response.write (vbTAB & "<title>")
-		
+
 	if bAlive = false AND (instr(1,sHost,"www.")) then
 		response.write replace(replace(Msg_Unavailable(iLanguageID-1),"<h3>",""),"</h3>","")
 	else
@@ -1318,12 +1303,12 @@ sub writeTitle ()
 			response.write cleanUpTitle(sTitle(iLanguageID-1)) & " " & Msg_Part1(iLanguageID-1) & " " & iPartNo (iLanguageID-1) & Msg_Part2(iLanguageID-1) & " " & iPartCount (iLanguageID-1)
 		else
 			response.write cleanUpTitle(sTitle(iLanguageID-1))
-		end if 
-	end if  
+		end if
+	end if
 
 	if sDomainType = "hrma" Then
 		writeText (" :: " & institutionName(iLanguageID-1))
-	end if	
+	end if
 
 	writeText (vbTAB & "</title>")
 end sub
@@ -1338,7 +1323,7 @@ sub writePartsBarNew (sPrevious, sTOC, sNext, stype)
         response.Write ("<div class=""wrapperlink"">" & vbCRLF)
 
         if sPrevious <> "" Then
-            response.Write ("<div class=""side-a""><strong><a class=""btsubweb"" href='" & sPrevious & "'>" & Msg_PreviousPart (iLanguageID-1) & "</a></strong></div>" & vbCRLF)            
+            response.Write ("<div class=""side-a""><strong><a class=""btsubweb"" href='" & sPrevious & "'>" & Msg_PreviousPart (iLanguageID-1) & "</a></strong></div>" & vbCRLF)
         else
             response.Write ("<div class=""side-a""><strong>&nbsp;</strong></div>" & vbCRLF)
         end if
@@ -1350,7 +1335,7 @@ sub writePartsBarNew (sPrevious, sTOC, sNext, stype)
         end if
 
         if sNext <> "" Then
-            response.Write ("<div class=""side-b""><strong><a class=""btsubweb"" href='" & sNext & "'>" & Msg_NextPart (iLanguageID-1) & "</a></strong></div>" & vbCRLF)            
+            response.Write ("<div class=""side-b""><strong><a class=""btsubweb"" href='" & sNext & "'>" & Msg_NextPart (iLanguageID-1) & "</a></strong></div>" & vbCRLF)
         else
             response.Write ("<div class=""side-b""><strong>&nbsp;</strong></div>" & vbCRLF)
         end if
@@ -1369,33 +1354,33 @@ sub writePrintableStartTable ()
 	response.write "<tbody>" &  vbCRLF
 	response.write "<tr>" &  vbCRLF
 	response.write "<td width='40' nowrap></td>" &  vbCRLF
-	response.write "<td width='18' nowrap></td>" &  vbCRLF				
+	response.write "<td width='18' nowrap></td>" &  vbCRLF
 	response.write "<img src='/images/clf/blank.gif' width='17' height='1' alt=" & chr(34) & chr(34) & " border='0'>" & vbCRLF
-	response.write "</td>" &  vbCRLF					
+	response.write "</td>" &  vbCRLF
 end sub
 
 sub writeHomePageBreadCrumb ()
-    response.Write ("<a href=" & chr(34) & swapFromProductionURL ("http://www.fin.gc.ca/fin-" & getLanguageSuffix & ".asp") & chr(34) & ">" & MSG_HomePage(iLanguageID-1) & "</a>&nbsp;&gt;&nbsp;")        
+    response.Write ("<a href=" & chr(34) & swapFromProductionURL ("http://www.fin.gc.ca/fin-" & getLanguageSuffix & ".asp") & chr(34) & ">" & MSG_HomePage(iLanguageID-1) & "</a>&nbsp;&gt;&nbsp;")
 end sub
 
 sub writeDocTypeListBreadCrumb ()
 	If (InStr (1, sURL, ".fin.gc.ca/afc/index-", vbTextCompare)=0 AND (iDocTypeID(0) = DT_ABOUT_US OR iDocTypeID(0) = DT_ADMINISTRATIVE_PAGE OR iDocTypeID(0) = DT_BIOGRAPHY OR iDocTypeID(0) = DT_CONSULTATION OR iDocTypeID(0) = DT_CONSULTATION_RESPONSE OR iDocTypeID(0) = DT_FREQUENTLY_ASKED_QUESTIONS OR iDocTypeID(0) = DT_INTELLECTUAL_PROPERTY_STATEMENT OR iDocTypeID(0) = DT_INTERACTIVE_RESOURCE OR iDocTypeID(0) = DT_ORGANIZATIONAL_DESCRIPTION OR iDocTypeID(0) = DT_RECRUITMENT)) then
-        response.Write ("<a href=" & chr(34) & "/afc/index-" & getLanguageSuffix & ".asp" & chr(34) & ">" & MSG_BCAboutUs(iLanguageID-1) & "</a>&nbsp;&gt;&nbsp;")        
+        response.Write ("<a href=" & chr(34) & "/afc/index-" & getLanguageSuffix & ".asp" & chr(34) & ">" & MSG_BCAboutUs(iLanguageID-1) & "</a>&nbsp;&gt;&nbsp;")
     ElseIf (InStr (1, sURL, ".fin.gc.ca/act/index-", vbTextCompare)=0 AND (iDocTypeID(0) = DT_ECONOMIC_AND_FISCAL_INFO OR iDocTypeID(0) = DT_ECONOMIC_AND_FISCAL_WORKING_PAPERS OR iDocTypeID(0) = DT_FEDERAL_TRANSFERS OR iDocTypeID(0) = DT_FINANCIAL_INSTITUTIONS_AND_MARKETS OR iDocTypeID(0) = DT_INTERNATIONAL_ISSUES  OR iDocTypeID(0) = DT_SERVICE OR iDocTypeID(0) = DT_SOCIAL_ISSUES OR iDocTypeID(0) = DT_TAXES_AND_TARIFFS)) then
-        response.Write ("<a href=" & chr(34) & "/act/index-" & getLanguageSuffix & ".asp" & chr(34) & ">" & MSG_BCActivities(iLanguageID-1) & "</a>&nbsp;&gt;&nbsp;")        
+        response.Write ("<a href=" & chr(34) & "/act/index-" & getLanguageSuffix & ".asp" & chr(34) & ">" & MSG_BCActivities(iLanguageID-1) & "</a>&nbsp;&gt;&nbsp;")
     ElseIf (InStr (1, sURL, ".fin.gc.ca/news-nouvelles/index-", vbTextCompare)=0 AND (iDocTypeID(0) = DT_MEDIA_RELEASE OR iDocTypeID(0) = DT_MEMORANDUM OR iDocTypeID(0) = DT_NEWS OR iDocTypeID(0) = DT_NOTICE)) then
-        response.Write ("<a href=" & chr(34) & "/news-nouvelles/index-" & getLanguageSuffix & ".asp" & chr(34) & ">" & MSG_BCNews(iLanguageID-1) & "</a>&nbsp;&gt;&nbsp;")            
-    ElseIf (InStr (1, sURL, ".fin.gc.ca/legislation/index-", vbTextCompare)=0 AND (iDocTypeID(0) = DT_LEGISLATION)) then        
-        response.Write ("<a href=" & chr(34) & "/legislation/index-" & getLanguageSuffix & ".asp" & chr(34) & ">" & MSG_BCLegislation(iLanguageID-1) & "</a>&nbsp;&gt;&nbsp;")                
-    ElseIf (InStr (1, sURL, ".fin.gc.ca/access/budinfo-", vbTextCompare)=0 AND (iDocTypeID(0) = DT_BUDGET)) then        
-        response.Write ("<a href=" & chr(34) & "/access/budinfo-" & getLanguageSuffix & ".asp" & chr(34) & ">" & MSG_BCBudgets(iLanguageID-1) & "</a>&nbsp;&gt;&nbsp;")                    
-    ElseIf (InStr (1, sURL, ".fin.gc.ca/pub/index-", vbTextCompare)=0 AND (iDocTypeID(0) = DT_AGREEMENT OR iDocTypeID(0) = DT_ASSESSMENT OR iDocTypeID(0) = DT_DRAFT_LEGISLATION OR iDocTypeID(0) = DT_ECONOMIC_STATEMENT OR iDocTypeID(0) = DT_EDUCATIONAL_MATERIAL OR iDocTypeID(0) = DT_FACT_SHEET OR iDocTypeID(0) = DT_GUIDE OR iDocTypeID(0) = DT_POLICY OR iDocTypeID(0) = DT_PUBLICATION OR iDocTypeID(0) = DT_PRESENTATION OR iDocTypeID(0) = DT_REPOT OR iDocTypeID(0) = DT_TREATY)) then        
-        response.Write ("<a href=" & chr(34) & "/pub/index-" & getLanguageSuffix & ".asp" & chr(34) & ">" & MSG_BCPublications(iLanguageID-1) & "</a>&nbsp;&gt;&nbsp;")                
+        response.Write ("<a href=" & chr(34) & "/news-nouvelles/index-" & getLanguageSuffix & ".asp" & chr(34) & ">" & MSG_BCNews(iLanguageID-1) & "</a>&nbsp;&gt;&nbsp;")
+    ElseIf (InStr (1, sURL, ".fin.gc.ca/legislation/index-", vbTextCompare)=0 AND (iDocTypeID(0) = DT_LEGISLATION)) then
+        response.Write ("<a href=" & chr(34) & "/legislation/index-" & getLanguageSuffix & ".asp" & chr(34) & ">" & MSG_BCLegislation(iLanguageID-1) & "</a>&nbsp;&gt;&nbsp;")
+    ElseIf (InStr (1, sURL, ".fin.gc.ca/access/budinfo-", vbTextCompare)=0 AND (iDocTypeID(0) = DT_BUDGET)) then
+        response.Write ("<a href=" & chr(34) & "/access/budinfo-" & getLanguageSuffix & ".asp" & chr(34) & ">" & MSG_BCBudgets(iLanguageID-1) & "</a>&nbsp;&gt;&nbsp;")
+    ElseIf (InStr (1, sURL, ".fin.gc.ca/pub/index-", vbTextCompare)=0 AND (iDocTypeID(0) = DT_AGREEMENT OR iDocTypeID(0) = DT_ASSESSMENT OR iDocTypeID(0) = DT_DRAFT_LEGISLATION OR iDocTypeID(0) = DT_ECONOMIC_STATEMENT OR iDocTypeID(0) = DT_EDUCATIONAL_MATERIAL OR iDocTypeID(0) = DT_FACT_SHEET OR iDocTypeID(0) = DT_GUIDE OR iDocTypeID(0) = DT_POLICY OR iDocTypeID(0) = DT_PUBLICATION OR iDocTypeID(0) = DT_PRESENTATION OR iDocTypeID(0) = DT_REPOT OR iDocTypeID(0) = DT_TREATY)) then
+        response.Write ("<a href=" & chr(34) & "/pub/index-" & getLanguageSuffix & ".asp" & chr(34) & ">" & MSG_BCPublications(iLanguageID-1) & "</a>&nbsp;&gt;&nbsp;")
     end if
 end sub
 
 sub writeDocTitleBreadCrumb ()
-    response.Write ("<a href=" & chr(34) & swapFromProductionURL (sURL) & chr(34) & ">" & sTitle(iLanguageID-1) & "</a>&nbsp;")        
+    response.Write ("<a href=" & chr(34) & swapFromProductionURL (sURL) & chr(34) & ">" & sTitle(iLanguageID-1) & "</a>&nbsp;")
 end sub
 
 sub writeRSSFeedBreadCrumb ()
@@ -1404,19 +1389,19 @@ end sub
 
 sub writeIsBasedOnBreadCrumb ()
     dim sisBasedOnString, sisBasedOnLink, sisBasedOnTitle
-    
+
     sisBasedOnString = sisBasedOn(iLanguageID-1)
     if (Len(sisBasedOnString) > 0) Then
         if (InStr (sisBasedOnString, ";")) Then
             sisBasedOnLink = Mid (sisBasedOnString,1,InStr (1,sisBasedOnString,";")-1)
             sisBasedOnTitle = Mid (sisBasedOnString,InStr (1,sisBasedOnString,";")+1)
-            response.Write ("<a href=" & chr(34) & sisBasedOnLink & chr(34) & "><acronym title=" & chr(34) & sisBasedOnTitle & chr(34) & ">" & sisBasedOnTitle & "</acronym></a>&nbsp;&gt;&nbsp;")                
+            response.Write ("<a href=" & chr(34) & sisBasedOnLink & chr(34) & "><acronym title=" & chr(34) & sisBasedOnTitle & chr(34) & ">" & sisBasedOnTitle & "</acronym></a>&nbsp;&gt;&nbsp;")
         end if
     end if
 end sub
 
 sub writeServiceHomePageLink ()
-    if (resourceServicePagedata(2,0) <> "END") then	    
+    if (resourceServicePagedata(2,0) <> "END") then
 	    response.write ("<ul class=""navSite"">" & vbCRLF)
 	    if sWhichService <> "" Then
 		    response.write "<li class=""navSite""><a class=""navSite"" href='" & swapFromProductionURL (resourceServicePagedata(1,iLanguageID-1)) & sParameter & "'" & ">" & resourceServicePagedata(2,iLanguageID-1) & "</a></li>" & vbCRLF
@@ -1431,31 +1416,31 @@ sub writeDisabledServiceHomePageLink ()
     if (resourceServicePagedata(2,iLanguageID-1) <> "END") then
 	    response.write ("<ul class=""navSite"">" & vbCRLF)
 	    response.write "<li class=""navSite"">" & resourceServicePagedata(2,iLanguageID-1) & "</li>"
-	    response.write "</ul>"	    
+	    response.write "</ul>"
 	end if
 end sub
 
 sub writeHRMAServiceHomePageLink ()
 	response.write ("<table width='132'>") & vbCRLF
-	response.write ("<tr>") & vbCRLF	
-	response.write ("<td valign='top'>") & vbCRLF		
+	response.write ("<tr>") & vbCRLF
+	response.write ("<td valign='top'>") & vbCRLF
 	if sWhichService <> "" Then
 		response.write "<a class='service2' href='" & swapFromProductionURL (resourceServicePagedata(1,iLanguageID-1)) & sParameter & "'" & ">" & resourceServicePagedata(2,iLanguageID-1) & "</a>"
 	else
 		response.write "<a class='service2' href='" & swapFromProductionURL (resourceServicePagedata(1,iLanguageID-1)) & sParameter & "' " & ">" & resourceServicePagedata(2,iLanguageID-1) & "</a>"
 	end if
 
-	response.write ("</td>") & vbCRLF	
-	response.write ("</tr>") & vbCRLF	
-	response.write ("</table>") & vbCRLF	
+	response.write ("</td>") & vbCRLF
+	response.write ("</tr>") & vbCRLF
+	response.write ("</table>") & vbCRLF
 end sub
 
 Function getServiceName()
-		getServiceName = resourceServicePagedata(2,iLanguageID-1) 
+		getServiceName = resourceServicePagedata(2,iLanguageID-1)
 end Function
 
 sub writeTableCells ()
-	if sView <> "printable" Then                    
+	if sView <> "printable" Then
         if sDomainType <> "hrma" then
 	        'writeAlternateFormats ()
 	    end if
@@ -1464,10 +1449,10 @@ sub writeTableCells ()
 		    case 1
 			    response.write (vbTAB & MSG_CONTENT_BEGINS(iLanguageID-1) & vbCRLF)
 			    response.write (vbTAB & "<div class=""center"">" & vbCRLF)
-                
+
                 response.write ("<a name=""cont"" id=""cont"">" & vbCRLF)
                 response.Write ("</a>")
-	            if stype <> "bottom"  AND bTitle = True Then	
+	            if stype <> "bottom"  AND bTitle = True Then
                     'response.Write ("<h1 class=""borderbottom"">" & sTitle(iLanguageID-1)& "</h1>") & vbCRLF
 	            end if
 
@@ -1479,13 +1464,13 @@ sub writeTableCells ()
 			    response.write (vbTAB & "</div>" & vbCRLF)
 			    response.write (vbTAB & MSG_LEFT_SIDE_MENU_ENDS(iLanguageID-1) & vbCRLF)
 			    response.write (vbTAB & MSG_CONTENT_BEGINS(iLanguageID-1) & vbCRLF)
-			    response.write (vbTAB & "<div class=""center"">" & vbCRLF)                
+			    response.write (vbTAB & "<div class=""center"">" & vbCRLF)
                 response.write ("<a name=""cont"" id=""cont"">" & vbCRLF)
 	            response.Write ("</a>")
-	            if stype <> "bottom"  AND bTitle = True Then	
+	            if stype <> "bottom"  AND bTitle = True Then
 	                'response.Write ("<h1 class=""borderbottom"">" & sTitle(iLanguageID-1)& "</h1>") & vbCRLF
 	            end if
-                
+
                 if (sPrevPart (iLanguageID-1) <> "" OR sTableOfContents(iLanguageID-1) <> "" OR sNextPart(iLanguageID-1) <> "") Then
 	                Call writePartsBarNew (sPrevPart(iLanguageID-1), sTableOfContents(iLanguageID-1), sNextPart(iLanguageID-1), "top")
                 end if
@@ -1496,7 +1481,7 @@ sub writeTableCells ()
                 response.write (vbTAB & "<div class=""right"">" & vbCRLF)
 	    end select
     else
-        if stype <> "bottom"  AND bTitle = True Then	
+        if stype <> "bottom"  AND bTitle = True Then
             'response.Write ("<br><h1 class=""borderbottom"">" & sTitle(iLanguageID-1)& "</h1>") & vbCRLF
         end if
 
@@ -1504,15 +1489,15 @@ sub writeTableCells ()
 end sub
 
 sub closeRightDivOpenContentsDiv ()
-    response.write (vbTAB & MSG_RIGHT_SIDE_MENU_ENDS(iLanguageID-1) & vbCRLF)			    
-    response.write (vbTAB & "</div>" & vbCRLF)			    		    
+    response.write (vbTAB & MSG_RIGHT_SIDE_MENU_ENDS(iLanguageID-1) & vbCRLF)
+    response.write (vbTAB & "</div>" & vbCRLF)
     response.write (vbTAB & MSG_CONTENT_BEGINS(iLanguageID-1) & vbCRLF)
     response.write (vbTAB & "<div class=""center"">" & vbCRLF)
     'response.Write ("<br>")
     response.write ("<div class=""blackborder"" id=""box1"">")
     response.write ("<a name=""cont"" id=""cont"">" & vbCRLF)
 	response.Write ("</a>")
-	
+
     if sView <> "printable" Then
         if (sPrevPart (iLanguageID-1) <> "" OR sTableOfContents(iLanguageID-1) <> "" OR sNextPart(iLanguageID-1) <> "") Then
 	        Call writePartsBarNew (sPrevPart(iLanguageID-1), sTableOfContents(iLanguageID-1), sNextPart(iLanguageID-1), "top")
@@ -1532,7 +1517,7 @@ end sub
 
 sub writePrintableLink ()
     response.Write (vbTAB & "<li>")
-	  
+
 	if sPrintableVersion (iLanguageID-1) <> "" Then
 		if InStr (sPrintableVersion (iLanguageID-1), "http://")Then
 			response.write ("<a class=""" & altPrintClass(iLanguageID-1) & """ href=" & chr(34) & sPrintableVersion (iLanguageID-1) & "?printable=True")
@@ -1546,7 +1531,7 @@ sub writePrintableLink ()
 	end if
 
 	if sQueryString <> "" Then
-		response.write "&amp;" & sQueryString 
+		response.write "&amp;" & sQueryString
 	end if
 	response.write chr(34) & ">"
 
@@ -1556,9 +1541,9 @@ sub writePrintableLink ()
 end sub
 
 sub writeEndTable ()
-	response.write "</td>" &  vbCRLF	
-	response.write "</tr>" &  vbCRLF	
-	response.write "</tbody>" &  vbCRLF	
+	response.write "</td>" &  vbCRLF
+	response.write "</tr>" &  vbCRLF
+	response.write "</tbody>" &  vbCRLF
 	response.write "</table>" &  vbCRLF
 end sub
 
@@ -1575,7 +1560,7 @@ sub writePostContentDetails()
 				response.write (vbTAB & MSG_ONE_COLUMN_LAYOUT_ENDS(iLanguageID-1) & vbCRLF)
 			case 2
 				response.write (vbTAB & MSG_TWO_COLUMN_LAYOUT_ENDS(iLanguageID-1) & vbCRLF)
-			case 3						
+			case 3
 				response.write (vbTAB & MSG_THREE_COLUMN_LAYOUT_ENDS(iLanguageID-1) & vbCRLF)
 		end select
 		response.write (vbTAB & vbCRLF)
@@ -1592,7 +1577,7 @@ sub writePostContentDetails()
 	    response.write (vbTAB & MSG_CONTENT_ENDS(iLanguageID-1) & vbCRLF)
 		writeFooter ()
 	end if
-	call writeClosingTags ()	
+	call writeClosingTags ()
 end sub
 
 sub writePrintablePostContentDetails()
@@ -1615,7 +1600,7 @@ sub writeErrorMessage (sText)
     response.write (vbTAB & "</div>" & vbCRLF)
     response.write (vbTAB & MSG_LEFT_SIDE_MENU_ENDS(iLanguageID-1) & vbCRLF)
     response.write (vbTAB & MSG_CONTENT_BEGINS(iLanguageID-1) & vbCRLF)
-    response.write (vbTAB & "<div class=""center"">" & vbCRLF)                
+    response.write (vbTAB & "<div class=""center"">" & vbCRLF)
     response.write ("<a name=""cont"" id=""cont"">" & vbCRLF)
     response.Write ("</a>")
 	response.write sText
@@ -1631,29 +1616,29 @@ Function swapFromProductionURL (sPart)
 				swapFromProductionURL = replace (sPart, "www.fin.gc.ca", "authoring.fin.gc.ca")
 			elseif InStr (sPart, "www2.fin.gc.ca") Then
 				swapFromProductionURL = replace (sPart, "www2.fin.gc.ca", "authoring.fin.gc.ca")
-			end if				
+			end if
 		Case "stagingva.fin.gc.ca"
 			if InStr (sPart, "stagingva.fin.gc.ca") Then
 				swapFromProductionURL = replace (sPart, "www.fin.gc.ca", "stagingva.fin.gc.ca")
-			end if	
+			end if
 		Case "staging.fin.gc.ca"
 			if InStr (sPart, "www.fin.gc.ca") Then
 				swapFromProductionURL = replace (sPart, "www.fin.gc.ca", "staging.fin.gc.ca")
 			elseif InStr (sPart, "www2.fin.gc.ca") Then
 				swapFromProductionURL = replace (sPart, "www2.fin.gc.ca", "staging.fin.gc.ca")
-			end if				
+			end if
 		Case "iis7.fin.gc.ca"
 			if InStr (sPart, "www.fin.gc.ca") Then
 				swapFromProductionURL = replace (sPart, "www.fin.gc.ca", "iis7.fin.gc.ca")
-			end if		    					
+			end if
 	end Select
 end Function
 
 sub writeAgencyAlternateFormats ()
-    dim i 
-    
+    dim i
+
     i=0
-    
+
     if ((iPartCount(iLanguageID-1) > 1 OR iNumFormats > 0) AND iPartNo(iLanguageID-1)=1) Then
         response.Write ("<div class=""altformat_hl""><br />" & vbCRLF)
         response.Write ("<div class=""altformat_content"">" & vbCRLF)
@@ -1665,9 +1650,9 @@ sub writeAgencyAlternateFormats ()
 			if Instr (sLocalFilename, "gc.ca") Then
 				sLocalFilename = replace (Mid(sLocalFilename,InStr(1,sLocalFilename, "gc.ca", vbTextCompare)+6), "/", "\")
 			end if
-			sLocalFilename = replace (sLocalFilename, "/", "\")						
+			sLocalFilename = replace (sLocalFilename, "/", "\")
 			sLocalFilename = "d:\http_hrma\" & sLocalFilename
-		    response.Write ("<p><img src=""/images/icons/" & writeExtensionName & ".gif"" alt=""" & writeExtensionName & """ width=""25"" height=""11"" /> <a href=""" & sFormatURLs (i, iLanguageID-1) & """>" & writeExtensionName & "</a></p>" & vbCRLF)	
+		    response.Write ("<p><img src=""/images/icons/" & writeExtensionName & ".gif"" alt=""" & writeExtensionName & """ width=""25"" height=""11"" /> <a href=""" & sFormatURLs (i, iLanguageID-1) & """>" & writeExtensionName & "</a></p>" & vbCRLF)
 			i = i + 1
 		 Loop
 
@@ -1679,28 +1664,28 @@ end sub
 sub writeAlternateFormats ()
 	dim iFileSize
 	dim fs
-	
+
 	if iNumFormats > 0 Then
 		response.write ("<br />")
 		response.Write ("<ul class=""altVersions"">" & vbCRLF)
 		response.Write ("<li class=""altVersions"">" & MSG_Versions(iLanguageID-1) & "</li>")
         if (iPartCount(iLanguageID-1) > 1) Then
-            writePrintableLink ()            
-        end if            
+            writePrintableLink ()
+        end if
 
-		i = 0						
-		
+		i = 0
+
 		Do While i < (iNumFormats)
 			sLocalFilename = sFormatURLs (i, iLanguageID-1)
 			if Instr (sLocalFilename, "gc.ca") Then
 				sLocalFilename = replace (Mid(sLocalFilename,InStr(1,sLocalFilename, "gc.ca", vbTextCompare)+6), "/", "\")
 			end if
 			sLocalFilename = replace (sLocalFilename, "/", "\")
-			
-			if sWebType="www" Then 
+
+			if sWebType="www" Then
 				sLocalFilename = "d:\http_tb\" & sLocalFilename
 			end if
-			
+
             iFileSize = getFileSize (sLocalFilename)
             if (iFileSize > 0) then
                 if (iLanguageID=2) then
@@ -1715,7 +1700,7 @@ sub writeAlternateFormats ()
         response.Write ("</ul>" & bvCRLF)
         response.Write ("<div class=""boxBottomAlt""></div>" & bvCRLF)
 
-	end if 
+	end if
 end sub
 
 Function getFileSize(filespec)
@@ -1728,7 +1713,7 @@ Function getFileSize(filespec)
    else
 		getFileSize = 0
    end if
-   
+
    Set fso = nothing
    Set f = nothing
 end Function
@@ -1748,7 +1733,7 @@ Const iKSize = 1024
 	'Find the most natural unit that has a unit description:
 
 	if vFileSize  > 1000000 Then
-		iDecimals = 2		
+		iDecimals = 2
 	end if
 	While vFileSize > iKSize and iUnitIndex < UBound(vaUnits(iLanguageID-1))
 		'Reduce to next higher unit:
@@ -1854,12 +1839,12 @@ iPos=0
 While i < iLen
 	iPos = InStr (iPos+1, sString, "&")
 
-	if iPos > 0 Then 
+	if iPos > 0 Then
 		if Mid (sString, iPos, 5) <> "&amp;" then
 			sString = Mid (sString, 1, iPos-1) & "&amp;" & Mid (sString, iPos+1)
-		else 
+		else
 			i = iPos + 5
-		end if 
+		end if
 	else
 		i = iLen
 	end if
@@ -1874,13 +1859,13 @@ Function swapToProductionURL (sURL)
 	Case "authoring.fin.gc.ca"
 		swapToProductionURL = replace (sURL, "authoring", "www")
 	Case "stagingva.fin.gc.ca"
-		swapToProductionURL = replace (sURL, "stagingva.", "www.")	
+		swapToProductionURL = replace (sURL, "stagingva.", "www.")
 	Case "staging.fin.gc.ca"
 		swapToProductionURL = replace (sURL, "staging", "www")
-	Case "iis7.fin.gc.ca"		
+	Case "iis7.fin.gc.ca"
 	    swapToProductionURL = replace (sURL, "iis7.", "www.")
 	Case "www2.fin.gc.ca"
-		swapToProductionURL = replace (sURL, "www2", "www")		
+		swapToProductionURL = replace (sURL, "www2", "www")
    end Select
 end Function
 
@@ -1902,7 +1887,7 @@ sub loadProperStyleSheet (sVersion)
 
 	if InStr(Request.ServerVariables("HTTP_USER_AGENT"), "Opera") > 0 Then sBrowserType = "Standard"
         ' for legacy clf 1 documents
-    'response.write (vbTAB & "<link rel=""StyleSheet"" href=" & chr(34) & "/css/standard-strict.css" & chr(34) & " type=" & chr(34) & "text/css" & chr(34) & " />" & vbCRLF)      
+    'response.write (vbTAB & "<link rel=""StyleSheet"" href=" & chr(34) & "/css/standard-strict.css" & chr(34) & " type=" & chr(34) & "text/css" & chr(34) & " />" & vbCRLF)
     'response.write (vbTAB & "<link rel=""StyleSheet"" href=" & chr(34) & styleFolder &  "common.css" & chr(34) & " type=" & chr(34) & "text/css" & chr(34) & " />" & vbCRLF)
 	response.write (vbTAB & "<link href=" & chr(34) & cssFolder &  "base.css" & chr(34) & " media=" & chr(34) & "screen, print" & chr(34) & " rel=" & chr(34) & "stylesheet" & chr(34) & " type=" & chr(34) & "text/css" & chr(34) & " />" & vbCRLF)
 
@@ -1920,9 +1905,9 @@ sub loadProperStyleSheet (sVersion)
 	call writeProgressiveEnhancementCode ()
 
 	response.write (vbTAB & MSG_CUSTOM_SCRIPTS_BEGIN(iLanguageID-1) & vbCRLF)
-    response.write (vbTAB & "<link href=" & chr(34) & cssFolder & "base-institution.css" & chr(34) & " media=""screen, print"" rel=""stylesheet"" type=""text/css"" />" & vbCRLF)	
-    response.write (vbTAB & "<link href=" & chr(34) & cssFolder & "institution.css" & chr(34) & " media=""screen, print"" rel=""stylesheet"" type=""text/css"" />" & vbCRLF)	
-     'response.write (vbTAB & "<link href=""" & styleFolder & "clf2-common.css"" media=""screen, print"" rel=""stylesheet"" type=""text/css"" />" & vbCRLF)	
+    response.write (vbTAB & "<link href=" & chr(34) & cssFolder & "base-institution.css" & chr(34) & " media=""screen, print"" rel=""stylesheet"" type=""text/css"" />" & vbCRLF)
+    response.write (vbTAB & "<link href=" & chr(34) & cssFolder & "institution.css" & chr(34) & " media=""screen, print"" rel=""stylesheet"" type=""text/css"" />" & vbCRLF)
+     'response.write (vbTAB & "<link href=""" & styleFolder & "clf2-common.css"" media=""screen, print"" rel=""stylesheet"" type=""text/css"" />" & vbCRLF)
 	response.write (vbTAB & MSG_CUSTOM_SCRIPTS_END(iLanguageID-1) & vbCRLF & vbCRLF)
 
 	response.write (vbTAB & MSG_TEMPLATE_PRINT_CSS_BEGINS(iLanguageID-1) & vbCRLF)
@@ -1947,7 +1932,7 @@ end sub
 
 Function cleanUpTitle (dirtyTitle)
 	dim tempTitle
-	
+
 	tempTitle=dirtyTitle
 
 	if InStr (tempTitle, "<br />") Then
@@ -1979,7 +1964,7 @@ Function getScriptFileName ()
 End Function
 
 if bgcolor = "" Then
-    bgcolor = "#ffffff"	
+    bgcolor = "#ffffff"
 end if
 
 if bHideLine = "" Then
@@ -1987,7 +1972,7 @@ if bHideLine = "" Then
 end if
 
 '***************************
-' default number of columns 
+' default number of columns
 '***************************
 inumberOfColumns = 2
 
@@ -2037,18 +2022,18 @@ end if
 sAltLangQueryString = ""
 serviceDomain = sHOST
 checkForLanguageParameter ()
-sURL = swapToProductionURL (sURL) 
+sURL = swapToProductionURL (sURL)
 
 if (getAllResourceInfo () =  -1) Then
 	ifAuxiliaryFiles ()
-	if InStr (sOrigURL, "-eng.asp") Then	
+	if InStr (sOrigURL, "-eng.asp") Then
 		sURL = replace (sOrigURL, "-eng.asp", "_e.asp")
 		sOrigURL = sURL
 		sURL = swapToProductionURL (sURL)
 		if (getAllResourceInfo () =  -1) Then
 		    Response.redirect "/finimScripts/handle404.asp"
 		end if
-	elseif InStr (sOrigURL, "-fra.asp") Then	
+	elseif InStr (sOrigURL, "-fra.asp") Then
 		sURL = replace (sOrigURL, "-fra.asp", "_f.asp")
 		sOrigURL = sURL
 		sURL = swapToProductionURL (sURL)
@@ -2056,7 +2041,7 @@ if (getAllResourceInfo () =  -1) Then
 		    Response.redirect "/finimScripts/handle404.asp"
 		end if
 	else
-		Call Response.AddHeader("HTTP/1.1", "404 not found") 
+		Call Response.AddHeader("HTTP/1.1", "404 not found")
 		Response.redirect "http://www.tbs-sct.gc.ca/finimScripts/handle404.asp"
 	end if
 end if
@@ -2112,9 +2097,9 @@ else
 end if
 
 if sBodyClass(iLanguageID-1) <> "" Then
-	BodyTag = "<body class=" & chr(34) & sBodyClass(iLanguageID-1) & chr(34) & ">" &  vbCRLF 
+	BodyTag = "<body class=" & chr(34) & sBodyClass(iLanguageID-1) & chr(34) & ">" &  vbCRLF
 elseif BodyTag = "" Then
-	BodyTag = "<body>" &  vbCRLF 
+	BodyTag = "<body>" &  vbCRLF
 end if
 
 if (sdDatePreserved <= date ()) Then
