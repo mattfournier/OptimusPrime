@@ -1,0 +1,487 @@
+// import semantic grid system --------------------------------------------------------------------------------------------------------------------- 
+@import 'grid.less';
+@columns: 12;
+@gutter-width: 20px;
+@total-width: 100%;
+
+// use the better box model --------------------------------------------------------------------------------------------------------------------- 
+* {
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	box-sizing:border-box;
+	//*behavior: url(boxsizing.htc);
+}
+
+// media query breakpoints --------------------------------------------------------------------------------------------------------------------- 
+@bigDesktop:  ~" screen and (min-width: 1152px)"; 
+@desk: ~" screen and (min-width: 977px)"; 
+@desktop: ~" screen and (min-width: 977px) and (max-width:1151px)"; 
+@tablet: ~" screen and (max-width: 976px)";		//960 + 16px for scrollbar
+@midway: ~" screen and (max-width: 768px)";		//roughly halfway
+@mobile: ~" screen and (max-width: 620px)";		//good golly, phones are getting big these days
+//@mobile: ~" screen and (max-width: 959px)";		//redefines mobile as all less-than-desktop device widths.
+@micro: ~" screen and (max-width: 379px)";		//for bob's dumb phone
+
+@scroll: ~" screen and (scrollTop: 1)";;
+
+// global site variables ---------------------------------------------------------------------------------------------- 
+
+// colour variables ---- note: should add description comments for usage
+
+//desktop navigation colors
+@navBG: #146094;
+@navDarker: #0F315B;
+@navDark: #23457F;
+@navLight: #87AEC9;
+@navMed: #15598F;
+
+@crimson: #CC0000; //used on link hover
+
+//mobile dropdown nav colours 
+@dropLvl1: #013A6A;
+@dropLvl2: #065fa4;
+@dropLvl3: #1d7bc5;
+@dropLvl4: #228fe4;
+
+//new nav colours
+@darkBar: #333333;
+@hOneBar: #999999;
+@hTwoBar: #CCCCCC;
+@hThreeBar: #E8E8E8;
+@appGrey: #666666;
+@borderGrey: #444444;
+@white: #FFFFFF;
+@hovBlue: #0099CC;
+@chBlue: #006699;
+@arrGreen: #99CC00;
+
+//new content colours
+@topHeading: #1c467a;
+@midHeading: #666;
+@subHeading: #333;
+@Desc: #007fbe;
+@buttonblue: #017fba;
+@darkgrey:#868686;
+@bannerblue:#22689b;
+@highlightgreen:#689538;
+@darkblue:#0b3364;
+@highlightblue:#BBE2FF;
+@socialgrey:#d1d1d1;
+
+//define standard hights of elements in navigation 
+@topNavItemHeight: 27px;
+@topNavMobileHeight: @topNavItemHeight * 5 * 1.6;
+
+//fonts
+@sans1: Verdana, Arial, Helvetica, sans-serif;
+@sans2: Arial, Helvetica, sans-serif;
+@narrowSans: "Arial Narrow", "Helvetica Narrow", Arial, Helvetica, sans-serif;
+@blackSans: "Arial Black", Gadget, sans-serif;
+
+@font-face {
+	font-family: "My Custom Font";
+	src: url('/2013/icons/icomoon.eot');
+	src: url('/2013/icons/icomoon.eot?') format('embedded-opentype'),
+	url('/2013/icons/icomoon.woff') format('woff'),
+	url('/2013/icons/icomoon.ttf') format("truetype"),
+	url('/2013/icons/icomoon.svg#icons') format("svg");
+}
+
+.customfont {
+	font-family: "My Custom Font";
+	text-decoration: none;
+}
+
+// Add in: STYLES and EFFECTS ---------------------------------------------------------------------------------
+.linkStyle (@normalColor, @hoverColor, @hoverDeco:none, @normalDeco:none) {
+	color: @normalColor;
+	text-decoration:@normalDeco;
+	&:visited {color: @normalColor; text-decoration:@normalDeco;}
+	&:hover, &:focus, &:active {color: @hoverColor; text-decoration:@hoverDeco;} 
+}
+
+.rounded (@radius:6px) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+	border-radius: @radius;
+}
+
+.floatingHeader {
+	display: none;
+}
+
+.shadow {
+	-moz-box-shadow: 3px 3px 4px #333;
+	-webkit-box-shadow: 3px 3px 4px #333;
+	box-shadow: 3px 3px 4px #333;
+	/* For IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+	/* For IE 5.5 - 7 */
+	filter: none;
+	//filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+}
+
+.shadowNav {
+	-moz-box-shadow: 0px 3px 2px -1px #999;
+	-webkit-box-shadow: 0px 3px 2px -1px #999;
+	box-shadow: 0px 3px 2px -1px #999;
+	/* For IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=180, Color='#000000')";
+	/* For IE 5.5 - 7 */
+	filter: none;
+	//filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=180, Color='#000000');
+}
+
+.navGradient {
+	background: @navBG; /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzE0NjA5NCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMyMzQ1N2YiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top, @navBG 0%, @navDark 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@navBG), color-stop(100%,@navDark)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, @navBG 0%,@navDark 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, @navBG 0%,@navDark 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, @navBG 0%,@navDark 100%); /* IE10+ */
+	background: linear-gradient(top, @navBG 0%,@navDark 100%); /* W3C */
+	/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#146094', endColorstr='#23457f',GradientType=0 );*/ /* IE6-8 */
+
+}
+
+.greyGradient {
+	background: #eeeeee; /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VlZWVlZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjcyJSIgc3RvcC1jb2xvcj0iI2VlZWVlZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNiM2IzYjMiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top, #eeeeee 0%, #eeeeee 72%, #b3b3b3 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(72%,#eeeeee), color-stop(100%,#b3b3b3)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #eeeeee 0%,#eeeeee 72%,#b3b3b3 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #eeeeee 0%,#eeeeee 72%,#b3b3b3 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #eeeeee 0%,#eeeeee 72%,#b3b3b3 100%); /* IE10+ */
+	background: linear-gradient(top, #eeeeee 0%,#eeeeee 72%,#b3b3b3 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#b3b3b3',GradientType=0 ); /* IE6-8 */
+}
+
+
+//Small mods -- look at way to reduce/remove them -----------
+
+
+//items are hidden in desktop view only!
+//used to hide "home" nav link in desktop
+.linkTO, .hidden {
+	display: none;
+	@media @tablet{
+		display: inline!important;
+	}
+}
+
+.onMobile {
+
+	.linkTO, .hidden {
+		display: inline !important;
+	}
+}
+
+#popUpForm{
+	display:none;
+	float:right;
+	padding:10px;
+}
+
+.twitterHighLight span{	
+	:hover{
+	background-color:@highlightblue; 
+	cursor:auto;
+	}
+}
+
+.printable {
+	display:none;
+}
+
+.rotate180 {
+	-webkit-transform:rotate(180deg);
+	-moz-transform:rotate(180deg);
+	-o-transform:rotate(180deg);
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+}
+
+.shadowDiffuse{
+-moz-box-shadow: 0px 10px 30px #ccc;
+-webkit-box-shadow: 0px 10px 30px #ccc;
+box-shadow: 0px 10px 30px #ccc;
+/* For IE 8 */
+-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#cccccc)";
+/* For IE 5.5 - 7 */
+filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#cccccc');
+}
+
+//  basic reset / main element styles ---------------------------------------------------------------------------------------------------------------------
+html, body {
+	height:100%; 
+	margin:0; 
+	padding:0; 
+	font:14px/21px @sans1;
+	@media @tablet{font:13px/20px @sans1;}
+}
+body {
+	position:relative;
+	z-index:0; 
+	.clearfix;
+}
+ul {
+	margin:0; 
+	padding:0;
+}
+a {.linkStyle(#333,#333,underline);}
+
+@import 'headerfooter.less';	//everything NOT IN mainContent
+@import 'InfographicsPage.less';
+@import 'VideoPage.less';
+@import 'Home.less';
+
+// --------------------------------------------------------------------------------------------------------------------- main content box style
+#mainContent {
+	border-top:4px solid #CCC;
+	border-left:1px solid #AAA; 
+	border-right:1px solid #AAA;
+	min-height:600px;
+	width:100%;
+	//background-color: transparent;
+	background-color:#fff ;
+	//background: url("../img/bg_mainContainer.png") top center repeat-x #FFF;
+	padding: 0 0 5em; //bottom padding ensures content doesn't clip footer transition
+	
+	@media @tablet {position:relative; top:-1px;}
+	
+@import 'content.less';
+@import 'VideoSpeech.less';	
+//@import 'FactSheet.less';	
+}
+
+#backtotop {
+	display:none;
+
+	@media @tablet {
+		position:fixed;
+		top:0;
+		left:0;
+		width:100%;
+		background:#000;
+		cursor:pointer;
+		font-weight:bold;
+		text-align:center;
+		padding:12px 0px;
+		font-size:1em;
+		color:#fff;
+
+
+	}
+}
+
+// --------------------------------------------------------------------------------------------------------------------- helper classes
+.inner {
+	overflow:hidden;
+	width:100%;
+	max-width:960px;
+	margin:auto;
+
+	@media @tablet {
+		padding:0 12px;
+
+		.subNav{
+			display:none;
+			}
+		#mainContent #subpageContent {
+			width:100%;
+		}
+	}
+}
+
+// The micro clearfix http://nicolasgallagher.com/micro-clearfix-hack/
+.clearfix {
+	*zoom:1;
+	&:before, &:after {content:""; display:table;}
+	&:after {clear:both;}
+}
+
+.navLevelToggle {
+	display:none !important;
+	@media @tablet {display:block !important;}
+}
+// BROWSER specific fixes ------------------------------------------------------------------------------------------
+
+// Firefox -------------------
+body:not(:-moz-handler-blocked)	#topNav.inner {
+	margin-top: 127px !important;
+}	
+
+
+// IE fixes -------------------
+html.ie {
+	.inner {width:960px; margin:auto;}
+
+	#mainContent section, #mainContent section .spotlightDesc {padding:0;}
+
+	// NOTE: imported styles from other .less files seem to require !important to overwrite
+	#search {height:32px !important;} //44px - 12px vertical padding
+	input.gsc-input {width:200px !important;}
+	#breadcrumbs {width:940px !important;}
+	
+/*
+	#sideNav {
+	//width:184px !important; 
+	padding: 0 8px 0 0 !important; 
+	margin-top:-24px !important;
+
+	} //total 192px, top margin is to offset hidden subnav toggle
+	
+*/
+
+
+	//#subpageContent {width:712px !important; padding: 0 40px 0 16px !important;} //total 768px
+	//figcaption, .twoColChart footer {width: 696px !important; margin-top:6px !important;} //712px - 16px for padding
+	#mainContent a[href^='http://www']{background:none !important; padding-right:0 !important;} // removed as IE7 adds this icon via JS
+	.spotlightDesc {width: 327px !important; padding: 1em 16px 0 !important; height:284px !important;} //360px - 1px for border - 32px for padding
+	//.spotlightImg {width: 600px !important; height:300px !important;}
+	.jshowoff, .jshowoff-controls, .spotlight {position:static !important; width:960px !important; height:auto !important; overflow:auto !important;}
+	//.features, .headlines {width:304px !important; padding: 0 16px !important;}
+	.dept {width:256px !important; padding: 0 16px !important;}
+
+	#mainContent #subpageContent {
+		width:100% ;
+	}
+	.scrollingNav{
+			#subpageContent{
+			float: right !important;
+			width:77% !important;
+			margin-top:0px !important;
+			}
+			.subNav{
+				display:none !important;
+			}
+			#sideNav{
+				width:10% !important;
+				float:left !important;
+				display:block;
+			
+			}
+	}
+
+	//Footer Fix START (O_o)!?  >------->> >------->> >------->>  
+
+	footer{
+		#footerDivider{
+			span{
+				font-size: 13px;
+				font-weight: normal;
+			}
+		}
+		.inner{
+			h2{a{
+				font-weight: bold;
+				font-size: 15px;}}
+			a{
+				font-weight: normal;
+				font-size: 13px;
+			}	
+		}
+		#bottomBlackBar{
+			a{
+				font-size: 12px;
+				line-height: 16.828125px;
+			}
+				.canLink{
+					font-size: 22px;
+					height:26px;
+					line-height: 21px;
+				}
+		}
+
+
+
+	}
+//Footer Fix END (O_o)!?  >------->> >------->> >------->>  
+}
+
+// END IE fixes --------------------------------------
+
+// Adds a fixed position navigation for big desktops
+// Gets ris of navigation on the side for small desktop screens 
+
+
+.subNav{
+	display:none;
+}
+#sideNav{
+	display:none;
+}
+
+#mainContent #subpageContent {
+	width:100%;
+}
+@media @tablet{
+#mainContent #subpageContent {
+	width:100%;
+}
+#sideNav{
+	width:none;
+	float:left;
+	display:none;
+}
+.subNav{
+	display:none;
+
+}
+}
+
+.scrollingNav{
+
+
+		@media @bigDesktop{	
+		#subpageContent{
+		//width:100px;
+	
+		//margin-left:200px !important;
+		float: right !important;
+		width:80% !important;
+		margin-top:0px !important;
+		}
+		.subNav{
+			display:none !important;
+		}
+		#sideNav{
+			width:180px !important;
+			float:left !important;
+			display:block;
+		}
+		}
+
+
+		@media @desktop{	
+		#subpageContent{
+		//width:100px;
+	
+		//margin-left:200px !important;
+		float: right !important;
+		width:80% !important;
+		margin-top:0px !important;
+		}
+		.subNav{
+			display:none !important;
+		}
+		#sideNav{
+			width:180px !important;
+			float:left !important;
+			display:block;
+		}
+		}
+
+}
+
+
+
+
+// @media @mobile{
+// #mainContent #subpageContent {
+// 	width:100%;
+// }
+// }

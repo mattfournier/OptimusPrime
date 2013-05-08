@@ -1,0 +1,265 @@
+
+// --------------------------------------------------------------------------------------------------------------------- main content box style
+/*#mainContent {	
+	background-color:#FFF;
+	zoom: 1;
+	overflow: hidden;	
+	width:100%;
+	padding: 0 0 5em; 
+	border-bottom: none;
+	display: block; clear: all;
+	//bottom padding ensures content doesn't clip footer transition	
+}
+
+// --------------------------------------------------------------------------------------------------------------------- <IE7 fixes
+html.ie {
+.titleBanner{
+	padding-top:20px !important;
+	width:100% !important;
+	text-align: center !important;
+}
+.SpeechText{h3{ line-height: 100% !important;} overflow: scroll !important;}
+}
+#i9{
+	#my_video_1{width:500px !important;	}
+}*/
+//----------------------------------------------------------------------------------------- Content
+.titleBanneR{
+	padding-top:30px;
+	//border-bottom: 1px solid #ccc;
+	padding-bottom: 20px;
+	width:100%;
+	//margin:auto;
+	//display:block;
+	text-align: center;
+	float:left;
+	background-color: #FFF;
+
+	h2{
+		//padding-top: 1px solid #ccc;
+		color:@highlightgreen;
+
+		width:100%;
+		font-size: 18px;
+		line-height: 40%;
+		font-weight: normal;
+		@media @tablet{width:100%;}
+		span{
+			font-weight: bold;
+			color:@darkblue;
+			@media @tablet{width:100%;}
+		}
+	}
+	p{	
+	@media @tablet{width:100%;}		
+		width:100%;
+		font-size: 9px;
+		color:@darkgrey;
+		
+	}
+
+}
+
+.videoBanner{
+width:100%;
+background-color: #FFF;
+float:left;
+@media @midway {padding:0px;}
+@media @mobile {padding:0px;}
+
+
+	.enhancedSpeech{
+
+		margin-left:2%;
+		margin-right:2%;
+		margin-bottom: 20px;
+		float:left;
+		width:96%;
+		height:450px;		
+		background-color: #333;
+		@media @tablet{height:400px;}
+		@media @midway{height:350px;}
+		@media @mobile{height:300px;}
+	
+		}
+
+		.infoBanner{
+			margin-left:2%;
+			margin-right:2%;
+			float:left;
+
+			width:40%;				
+			text-decoration: none;
+			
+			a{
+				font-size:12px;
+				color: #ccc;
+				font-weight: normal;
+				float:left;
+				padding: 10px;
+				padding-bottom: 0px;
+				text-decoration: none;
+
+			
+				#graph{
+					font-size: 18px; 
+					color:@highlightgreen;
+				}
+				#reel{
+					font-size: 18px; 
+					color:@buttonblue;
+				}
+			}
+}
+
+.Socialicons{
+		float:left;
+		position: relative;
+		width:100%;
+		padding:15px;
+		padding-bottom: 10px;
+		text-align: left;
+		margin-top: 5px;
+		font-size:15px;
+		text-decoration: none;
+
+	#eapvid{
+	
+		font-size: 12px;
+		//padding-right:8%;
+		span{color:@bannerblue; font-size: 20px; vertical-align: sub; float: left;}
+		a{color: #333;}
+
+	}
+	.theicons{ @media @mobile{display: none;}}
+
+	a{color:@socialgrey; padding:10px; vertical-align: sub; }
+		:hover{text-decoration: none; color:@bannerblue;}
+	
+
+	label {
+		float:right;
+		position: relative;
+
+		span{
+
+		}
+
+		.shareWidget{
+			-webkit-transition: width 1s, height 1s;
+			-moz-transition: width 1s, height 1s;
+			-o-transition: width 1s, height 1s;
+			-ms-transition: width 1s, height 1s;
+			transition: width 1s, height 1s;	
+
+			position: absolute;
+			right: 0;			
+			width: 0;
+			height: 0;
+			overflow: hidden;
+
+			span {
+				color:#FFF;
+				background-color: #333;
+				font-size: 10px;
+				padding-top: 10px;
+				padding-left: 24px;
+				
+				text-align: right;
+				float:right;
+
+				min-width: 260px;
+				min-height: 55px;
+
+				iframe {
+					float: left;
+					//border: 2px solid #AAA !important;
+					min-height: 3.8em !important;
+					margin-right: 1.3em;
+					padding: 0.5em !important;
+				}
+			}
+		}
+
+
+		#share-widget-check:checked ~ .shareWidget{
+			
+			width: 260px;
+			height: 55px;
+
+			.shadowDiffuse;
+			border: 2px solid #999;
+
+		}
+		#share-widget-check:checked ~ span{
+			//display: none;
+		}
+
+	}
+
+		
+
+
+}
+}
+
+#SpeechText{
+	width:70%;
+	background-color: #FFF;
+	min-height: 30px;
+
+	overflow: hidden;
+	float: left;
+	margin-left: 15%;
+	margin-right: 15%;
+	padding: 10px;
+	overflow: scroll;
+	margin-top: 10px;
+	
+@media @midway {width:100%; margin-left: 0%; margin-right: 0%;}
+@media @mobile {width:100%; margin-left: 0%; margin-right: 0%;}
+	.speechPara{
+		
+		height:350px;
+		padding: 10px;
+	}
+	#textTitle{
+		//padding-bottom: 10px;
+		//border-bottom: 1px solid #ccc;
+	}
+	h3{
+		text-align: center;
+		font-size: 12px;
+		line-height: 50%;
+	}	
+
+	p{
+		font-size: 12px;
+		font-weight: normal;
+		//padding: 10px;
+	}
+
+}
+
+
+// Adds a fixed position navigation for big desktops
+
+// Gets ris of navigation on the side for small desktop screens 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

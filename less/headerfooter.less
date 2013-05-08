@@ -1,0 +1,999 @@
+
+// This file contains all CSS related to the header and footer (i.e. everything not within the mainContent div)
+
+// --------------------------------------------------------------------------------------------------------------------- department/canada header bar styles
+// checkbox fix for ANDROID
+
+body { 
+  -webkit-animation: bugfix infinite 1s; 
+}
+@-webkit-keyframes bugfix { 
+  from { padding: 0; } 
+  to { padding: 0; } 
+}
+
+#skipper {
+	position:absolute;
+	top:2px;
+	right:49%;
+	text-align:center;
+	line-height:1.1em;
+
+	@media @tablet {
+		width: 0;
+		height: 0;
+		overflow: hidden;
+	}
+
+	ul {
+		list-style-type:none;
+	}
+
+	a {
+		display:block;
+		font-weight:bold;
+		padding:0 16px;
+		border:2px solid transparent;
+		.linkStyle(transparent,#FFF,none);
+
+		&:hover,&:active,&:focus {
+			border-color:@navMed;
+			background-color: #000;
+		}
+	}
+}
+
+#topBlackBar {
+	background-color:#000;
+	min-height: 40px;
+	max-height:64px;
+	width:100%;
+
+	@media @tablet {
+		background-color: #333;
+		border-bottom: 1px solid #444;
+		// position: fixed;
+		// top:0;
+		// z-index: 1000;
+	}
+
+	a {
+		font-size:0.925em;
+		.linkStyle(#FFF,#FFF,underline);
+	}
+
+	.deptLogo, .canLogo {
+		float:left;
+		padding:0.6em 0.3em 0 0.3em;
+		width:236px;
+	}
+	.deptLogo {
+		@media @tablet{display: none;}
+	}
+	.canLogo {
+		display: none;
+		@media @tablet{
+			display: inline-block; 
+			float:left;
+			//height: 20px;
+			width: 20px;
+		}
+	}
+
+	.toggle-menu{
+		float: left;
+		border-right: 1px solid #000;
+	}
+	.toggle-alt, .toggle-search{
+		float: right;
+	}
+	.toggle-alt {
+		border-right: 1px solid #000;
+	}
+
+}
+
+// --------------------------------------------------------------------------------------------------------------------- site header styles
+
+
+
+.container {
+	background: url("../img/background.jpg") center 40px repeat-x #FFF;
+	//@media @tablet { background: url("../img/background.jpg") center 64px repeat-x #FFF;}	
+	@media @tablet { background: url("../img/background.jpg") center 40px repeat-x #FFF;}
+}
+
+/*
+// This section uses Jacques' new version of the header background with separate images
+
+.container {background: url("../img/bluewaves.jpg") 15% 40px repeat-x #FFF;}
+#siteHeader {
+	background: url("../img/redleaf.png") center 4px no-repeat transparent;
+	background-size: 130px;
+}
+*/
+.ie #siteTitle {
+
+	
+}
+#siteTitle {
+	display:block;
+	float:left;
+	margin: 50px 0 0 10px;
+	font-family: @sans2;
+	font-size:2.143em;
+	color:#FFF;
+	line-height: 1.1em;
+	//filter: progid:DXImageTransform.Microsoft.Shadow(color=#333333,direction=125);
+	filter: Shadow(Color=#333333, Direction=125,Strength=1);
+	text-shadow:1px 1px 1px #333;
+	.linkStyle(#FFF,#FFF,underline,none);
+
+	@media @tablet {
+		margin:60px 0 40px;
+		width:100%;
+		text-align:center;
+	}
+}
+#canWordmark {
+	float:right;
+	margin:36px 4px 24px 4px;
+	@media @tablet {display:none;}
+}
+
+// --------------------------------------------------------------------------------------------------------------------- google search styles
+#search {
+	clear:right;
+	float:right;
+	width:315px;
+	height:44px;
+	padding: 12px 10px 0 12px;
+	background-color:@navBG;
+	border: 1px solid @navDark;
+	border-top: 1px solid @navLight;
+	border-bottom:none;
+	position:relative;
+	top:-44px;
+	margin-bottom: -44px;
+	right: -1px;
+	
+	@media @tablet {
+		display: none;
+		width:100%; 
+		top: 0; 
+		right: 0; 
+		margin-bottom: 8px;
+
+		background: @darkBar;
+		border: none;
+		//border-bottom: 1px solid @borderGrey;
+	}
+
+	.gsc-branding-text, .gsc-branding-img, .gsc-clear-button {
+		display:none !important;
+	} 
+
+	input.gsc-input {
+		background:#FFF !important; 
+		font-size:14px;
+		padding: 3px 1px;
+		color:#444;
+		border: 1px solid #AAA;
+	    -webkit-box-shadow: none;
+	    -moz-box-shadow: none;
+	    box-shadow: none;
+	    float:left;
+	    background: none repeat scroll 0% 0% #F0FCFF !important;
+	    -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px;
+	}
+
+	td.gsc-input {
+		padding-right:2px;
+	}
+
+	input.gsc-search-button {
+	 	background:url("../img/button.gif") repeat-x #AAA;
+		border-top: 1px solid #FFF;
+		border-right: 1px solid #999;
+		border-bottom: 1px solid #999;
+		border-left: 1px solid #FFF;
+		.rounded(2px);
+		color:#444;
+		text-shadow: 0 1px 0pt #EEE;
+	    padding:2px 0;
+	    float:left;
+	    font-size:14px;
+	    width: 75px;
+	    height:25px;
+	    cursor:pointer;
+	    font-family: Verdana, Arial, Helvetica, sans-serif;
+	    font-weight: normal;
+	    input{display:none;}
+	    	@media @tablet{
+		
+		display: none!important;
+	}
+
+	    &:focus, &:hover, &:active {background:url("../img/button-focus.gif") repeat-x scroll 0pt 0pt #AAA;}
+	}
+}
+
+// --------------------------------------------------------------------------------------------------------------------- nav styles
+
+
+.toggle-menu, .toggle-search, .toggle-alt {
+	display: none;
+	@media @tablet {
+		display: block;
+		height: 24px;	
+	    padding: 0.05em 0.3em 0 0.3em;
+	    margin-top: 0.3em;
+
+	    .linkStyle(@white, @hovBlue, none);
+	    font-size: 2em;
+	}
+}
+
+.container {
+	position: relative;
+}
+
+#topNav.inner {
+	.clearfix;
+	.navGradient;
+
+	border: 1px solid @navDark;
+	border-top: 1px solid @navLight;
+	border-bottom:none;	
+	margin-top:27px;
+	z-index: 1000;
+	overflow: visible;
+	position: relative;
+
+
+	-webkit-transition: width 0.5s ease, height 0.5s ease;
+	-moz-transition: width 0.5s ease, height 0.5s ease;
+	-o-transition: width 0.5s ease, height 0.5s ease;
+	-ms-transition: width 0.5s ease, height 0.5s ease;
+	transition: width 0.5s ease, height 0.5s ease;
+
+	@media @tablet {
+		.shadow;
+		overflow: auto;
+		position: absolute;
+		z-index: 1000;
+		top: 40px;
+		width: 0;
+		min-height: 5px;
+
+		margin-top: 0;
+		padding: 0;
+		border: 0;
+		background: none;
+		background-color: @darkBar;
+	}
+
+	.blueBar {
+		//.inner;
+		text-align: left;
+		width:100%;
+
+		@media @tablet {
+			
+			display: none;
+			overflow: hidden;
+			width: 100%;
+
+		}
+
+		.cH1 {
+			font: 1.25em/1em @sans2;
+			font-weight: bold;
+			color: #000;
+			padding-bottom: 10px;
+			vertical-align: middle;
+			@media @tablet{
+				font-size: 0.8em;
+				font-weight: normal;
+				vertical-align: baseline;
+				&:hover, &.active {
+					color:@hovBlue;
+				
+				}
+
+			}
+			//.linkStyle(@hovBlue, @white, none);
+		}
+
+		.cSub1{
+			font: 1.09em/1em @blackSans;
+			font-weight: bold;
+			color: #000;
+			//.linkStyle(#000, #000, none);
+		}
+
+		.linkTO{
+			border: 1px solid @white !important;
+		}
+		
+		ul {
+			.rounded;
+		
+
+			-webkit-transition: width 0.7s ease, left 0.5s ease;
+			-moz-transition: width 0.7s ease, left 0.5s ease;
+			-o-transition: width 0.7s ease, left 0.5s ease;
+			-ms-transition: width 0.7s ease, left 0.5s ease;
+			transition: width 0.7s ease, left 0.5s ease;
+
+			display: none;
+			position: absolute;
+			z-index: 100;
+			left: -1px;
+			width: 100.2%;
+			padding: 0.5em;
+			background-color:#FFF;
+			
+			border-top-right-radius: 0;
+			border-top-left-radius: 0;
+			border: 2px solid @navDark;
+			//border-left: 1px solid @navDarker;
+			border-top: none;			
+			//opacity:0.9;
+			//		filter:alpha(opacity=90); /* For IE8 and earlier */	
+
+			@media @tablet {
+				position: relative;
+				width: 100%;
+				padding: 0;
+
+				background-color: @hOneBar;
+				border-radius: 0;
+				border: none;
+			}
+			@media @desk{
+			.Sections{
+						margin-left: 1% !important;
+						margin-right: 1% !important;
+						width:23% !important;
+						float:left !important;
+						display: block !important;
+						border-left: 1px solid #ccc;
+				border-top: none;
+				border-right:none;
+				border-bottom:none;
+				
+
+						.topper{
+							//link.shadow;
+							margin-top: 1em;
+							margin-bottom: 1em;
+							//background-color: #CCC;
+							//border-left: 2px solid #ccc;
+							color:#FFF;
+							width:102%;
+							vertical-align: middle;
+							//height:3em;
+							height: auto;
+							float:left;
+							//.shadow;
+							.cH1{
+								color:#000;
+
+								
+							}
+						}
+			}
+			.expandable{
+				display:block !important;
+				//margin-top: 1em;
+				//border-left: 1px solid #ccc;
+				//border-top: none;
+				//border-right:none;
+				//border-bottom:none;
+
+				border:none;
+				float:left;
+				//background-color: #000;
+
+					
+				img{
+					width:100%;
+					height: auto;
+				}
+			}
+			}		
+			ul {
+				//position: absolute;
+				top: 2px;
+				max-width: none;				
+				background-color:#FFF;
+				@media @desk{
+					position: relative;
+					display:block;
+					min-height: 100%;
+					z-index: 1;
+					left:0;
+					background-color: #FFF;		
+				}
+
+				@media @tablet {
+					border: none;
+					background-color: @hTwoBar;
+					position: relative;
+					left: 0;
+					top: 0;
+					width: 100%;
+				}
+
+				ul {
+					
+					left: 60%;
+					width: 40%;
+					background-color: #FFF;
+					@media @tablet { border: none; left: 0; width: 100%; background-color: @hThreeBar;}
+
+					ul {
+						left: 70%;
+						width: 30%;
+						margin-top: 3em;
+						background-color: #FFF;
+						@media @tablet { border: none; left: 0; width: 100%; background-color: @white;}
+					}
+				}
+
+			
+			}
+		}
+
+		ul.lostFocus {
+			
+
+			margin: 0;
+			left: -1px;
+			//max-width: 300px;
+			> li > ul{
+				//margin: 0;
+				//width: 95%;
+				//left: 5.3%;
+				//min-width: 142%;
+				//left: 3em;
+				@media @tablet {left: 0; width: 100%;}
+
+
+			}
+
+
+		}
+
+
+
+		li {
+			list-style-type:none;
+			white-space: normal;
+			@media @tablet { min-height: 5em; }
+		}	
+
+		> li { /*top level links --ie. Budget Plan, Hightlights, etc */
+			float:left;
+			padding-left: 1em;
+			border-left: 1px solid @navDark;
+			border-right: 1px solid @navMed;
+			white-space: nowrap;
+
+
+			@media @tablet {
+				
+				width:100%;
+				border:none;
+				border-top: 1px solid @hOneBar;
+				position:static;
+				padding: 0;
+			}
+
+			&:first-child {
+				border-left:none;
+				border-top:none;
+			}
+
+			&:hover, &.active {
+				background-color: @navDarker;
+				@media @tablet{background: @darkBar; color:@hovBlue;}
+			}
+
+			a {
+				text-align: center;
+				position: relative;
+				padding: 2px 20px 0 8px;
+				display:block;
+				min-height:@topNavItemHeight;
+				font-size: 1em;
+				.linkStyle(@white, @white, underline);
+
+				@media @tablet {
+					//width: 90%;
+					text-align: left;
+					overflow: hidden;
+					font: 1.7em/1em @narrowSans;
+					padding: 0.5em;
+					padding-top: 1em;
+					padding-left: 1em;
+					min-height:@topNavItemHeight*1.6;
+					.linkStyle(@white, @hovBlue, none);
+				}
+
+				.refineW {
+					float: left;
+					padding-right: 12px;
+					background: url('../img/expand.gif') no-repeat right center;
+					@media @tablet { padding-right: 0; background: none; height: 100%; width: 80%;}
+				}
+
+			}
+			/*
+			.downArrow {
+				display: inline-block;
+				width: 1em;
+				height: 1em;
+				float: right;
+				background: url('../img/expand.gif') no-repeat right center;
+
+				@media @tablet{display:none;}
+			}	
+			*/
+
+			.expandicon {
+				//text-align: right;
+				//display: inline-block;
+				//padding-left: 1em;
+				//float: right;
+				//background: url("../img/expand.gif") no-repeat right center;
+				display: none;
+				@media @tablet {
+					display: block;
+					float: right;
+					width: 20%;
+					padding: 0.2em;
+					z-index: 100;
+					margin-top: -0.2em;
+					//margin-left: 2em;
+					font-size: 1.5em !important;
+
+					//background: url("../img/expand_mobile.png") no-repeat right center;
+				}
+			}
+
+
+
+			.flipped {
+				-webkit-transform:rotate(90deg);
+				-moz-transform:rotate(90deg);
+				-o-transform:rotate(90deg);
+				filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+				width: auto !important;
+				//height: 20% !important;
+			}
+			@media @tablet {min-width: 240px;}  
+			
+
+			li { /* section headings/title -- ie. C1 introduction, C2, A1, A2, etc.*/
+				
+				//border-top: 1px solid @navMed;
+
+				@media @tablet { border-top: 1px solid @hThreeBar;}
+				
+				.refineW {
+					background: url('../img/expand-left.gif') no-repeat right center;
+					@media @tablet { background: none; }
+				}
+
+				&:first-child{
+					border:none;
+				}
+				&:hover, &.active {
+					@media @desk{
+					background-color: #CCC;
+					color:#000;
+
+					.cH1{
+						color:#000;
+					}
+					}
+
+					@media @tablet{background: @hOneBar;color: @hovBlue;}
+				}			
+
+				a {
+					text-align: left;
+					display:block;
+					font-size: 0.8em;
+					color:#000;	
+					.linkStyle(#000, #000, none);				
+
+					@media @tablet {
+						.linkStyle(#000, @hovBlue, none);
+						font: 1.6em/1em @narrowSans;
+						//font-weight: bold;
+					}
+				}
+
+				li { /* sub headings ie. h2s in every chapter */
+					
+					//border-top: 1px solid @hThreeBar;
+				
+					&:first-child{
+						border:none;
+					}
+					&:hover, &.active {
+						background-color: #CCC;
+						@media @tablet{background: @hTwoBar;}
+					}
+
+					a {
+						
+
+						@media @tablet {
+							.linkStyle(#000, @chBlue, none);
+							font: 1.15em/1em @sans2;
+							//font-weight: bold;
+						}
+					}
+
+					li {
+						
+						border-top: 1px solid @chBlue;
+
+						@media @tablet { border-top: 1px solid @hOneBar; }
+				
+						&:first-child{
+							border:none;
+						}
+						&:hover, &.active {
+							background-color: @dropLvl2;
+							@media @tablet{background: @hThreeBar;}
+						}
+
+						li {
+							border-top:  1px solid @chBlue;
+							@media @tablet { border-top: 1px solid @hOneBar; }
+
+							&:hover, &.active {
+							background-color: @dropLvl3;
+							@media @tablet{background: @white;}
+						}
+						}
+
+					}
+				}
+			}
+		}
+	}
+}
+
+.control-check {
+	display: none;
+	position: absolute;
+}
+
+//nav open ----------------------------------------
+#main-nav-check:checked ~ #topNav {
+	@media @tablet {
+		width:50%;
+		height: 100%;
+		.blueBar{display:block;}
+		#search {display: none;}
+	}
+	@media @mobile {
+		width: 90%;
+	}
+}
+
+// search open ---------------------------
+
+#search-check:checked ~ #topNav {
+	@media @tablet {
+		z-index: 100;
+		width: 100%;
+		height: 7.5em;
+		.blueBar {display: none;}
+		#search{ display: block;
+
+			.gsc-input{
+				height: 1.5em;
+				padding: 0;
+				padding-left: 0.7em;
+				font-size: 2em;
+
+				.gsc-input-box {
+				height: 110%;
+				width: 100%;
+				padding: 0;
+				//padding-left: 0.7em;
+				//font-size: 2em;
+				}
+
+			}
+
+		}
+	}
+}
+
+//alt nav open and close --------------------------
+#topBlackBar .topSiteNav {
+	-webkit-transition: width  1s;
+	-moz-transition: width 1s;
+	-o-transition: width 1s;
+	-ms-transition: width 1s;
+	transition: width 1s;	
+
+	@media @tablet {
+		.shadow;
+		position: absolute;
+		overflow: hidden;
+		width: 0;
+		top: 40px;
+		left: 0;
+		background-color: @darkBar;	
+		z-index: 1000;
+		text-align: right;
+	}
+
+	.deskTopUl {
+		margin:8px 2px 8px 390px;
+		list-style-type:none;
+		float:left;
+		font-size:0.925em;
+		// @media @tablet {margin:0 0 8px 0; width:100%;}
+		@media @tablet {display: none;}
+
+		li {
+			float:left;
+			color:@white;
+		}		
+	}
+
+	.mobileTopUl{
+		display:none;
+
+		@media @tablet{
+			display: block;
+			margin: 0;
+			min-width: 200px;
+			width: 100%;
+			height: 100%;
+		}
+
+		li {
+			float: left;
+			width: 100%;
+			border-bottom: 1px solid #999;
+
+			&:last-child {
+				border: none;
+			}
+		}
+
+		a {
+			display: block;
+			padding: 1em;
+			color: #FFF;
+			font-size: 1.2em;
+			font-family: arial;
+			letter-spacing: 0.15em;
+			&:hover{ text-decoration: none; color: #0099CC;}
+		}
+	}
+
+}
+
+#alt-nav-check:checked ~ #topBlackBar .inner{
+
+	.topSiteNav {
+		@media @tablet {
+			display: block;
+			width: 100%;
+		}
+	}
+}
+
+/*
+#main-nav-check:checked ~ #topBlackBar .toggle-menu{
+	overflow: hidden;
+	display: none;
+}
+
+
+#topNav.inner{
+	@media @tablet{
+	  float: right;
+	  width: 0%;
+	  height: 100%;
+	}
+}
+*/
+
+
+// --------------------------------------------------------------------------------------------------------------------- footer styles
+footer {
+    position: relative;
+    background:transparent;
+	clear:both;
+	margin-top:-27px;
+
+	#footerDivider {
+		background: url("../img/footer-deco-bg.png") bottom center repeat-x transparent;
+		width:100%;
+		height:60px;
+		font-size:0.925em;
+		@media @tablet {
+			position:absolute;
+			bottom: -100px;
+			height:100px;
+		}
+		
+
+		.inner {
+			background: url("../img/footer-deco.png") bottom center no-repeat;
+			width:100%;
+			height:60px;
+			@media @tablet {height:100px;}
+			padding:0 12px;
+		}
+
+		a {
+			.linkStyle(#222,@crimson,underline);
+		}
+
+		#termsTrans,#dateModified {
+			width:50%;
+			float:left;
+			@media @tablet {width:100%;}
+		}
+		#dateModified {
+			text-align:right;
+			@media @tablet {text-align:left;}
+		}
+	}
+
+	#deptFooter {
+		width:100%;
+		background-color:#EFEFEF;
+		font-family: @sans2;
+		font-size:0.925em;
+		overflow:hidden;
+
+		@media @tablet {
+			display: none;
+		}
+
+		a {
+			.linkStyle(#222,#CC0000,underline);
+		}
+
+		ul {
+			list-style-type:none;
+		}
+
+		ul.inner > li {
+			width:25%;
+			float:left;
+			margin: 0 0 12px;
+
+			@media @tablet {
+				width:50%;
+				margin: 0 0 12px;
+			}
+		}
+
+		h2 {
+			font-size:1.143em;
+			margin:0;
+		}
+	}
+
+	#bottomBlackBar {
+		background-color:#000;
+		width:100%;
+		padding: 10px 0;
+		overflow:hidden;
+
+		@media @tablet {
+			display: none;
+		}
+
+		.inner {
+			position:relative;
+		}
+
+		ul {
+			width:80%;
+			max-width: 824px; //960-136 for the canLink
+			float:left;
+			list-style-type:none;
+			display:inline;
+
+			@media @tablet {
+				width:100%;
+			}
+
+			li {
+				width:20%;
+				float:left;
+				display:block;
+				color:#FFF;
+				font-family: @sans2;
+				font-size:0.925em;
+				line-height:1.3em;
+
+				a {
+					font-size:0.925em;
+					.linkStyle(#FFF,#FFF,underline);
+					display:block;
+				}
+
+				// @media @tablet {
+				// 	width:33.33333%;
+				// 	margin-bottom:6px;
+				// }
+				@media @tablet {
+					width:50%;
+				}
+			}
+		}
+
+		a.canLink {
+			position:absolute;
+			bottom:0;
+			right:0;
+			display:block;
+			font-family: @sans2;
+			font-size:1.571em;
+			.linkStyle(#FFF,#FFF,underline);
+			width:136px;
+			height:26px;
+		}
+	}
+}
+
+// --------------------------------------------------------------------------------------------------------------------- <IE7 fixes
+
+.ie {	
+	//header fixes
+	#topBlackBar .inner {position:relative;} //to enable forcing topSiteNav right
+	.deptLogo {width:234px;} // -2px compensating for left padding
+	.topSiteNav ul {position:absolute; top:0; right:0;} //force right
+	#siteTitle {line-height:1.5em;} //prevents caps, ascenders and descenders from getting cut off
+	#search {left:1px;}
+	.sub-menu, .sub-menu a {width:100%;}
+	#topNav {filter: none; background: @navBG; overflow: visible; height:2em;}
+	body .container #topNav.inner .expandicon {float:none !important;}
+	
+	//footer fixes
+	#footerDivider .inner {width: 936px;} // 960-24px of padding - this fixes Terms/Trans and Date Modified
+	#deptFooter {padding-bottom:20px;}
+	#bottomBlackBar ul {width: 824px;}
+	#bottomBlackBar li {width:160px;}
+
+.topics{
+
+}
+
+.Sections{
+	width:25% !important;
+	height:auto !important;
+	float:left;
+	border-right:1px solid #ccc;
+
+	ul{
+		position: relative !important;
+		display: block !important; 
+		border:none !important;
+		background:transparent !important;
+		width:100% !important;
+	}
+
+	.topper{
+		padding-bottom: 20px;
+	}
+}
+}

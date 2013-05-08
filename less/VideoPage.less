@@ -1,0 +1,260 @@
+html.ie {
+.socialBanner{
+	.socialIcon{ 	width:96% !important;
+	margin-left: 2% !important;
+	margin-right: 2% !important;}
+}
+.featuredVideo{
+	margin-left: 20px !important;
+}
+.featuredDesc{
+
+	h2{
+			
+			line-height: 100% !important;
+			padding-top: 10px !important;
+			width:100%;
+			float:left;
+			p{
+				color:@darkgrey;
+				font-size: 12px;
+			}
+		}
+		p{font-weight: normal !important; padding-top: 10px !important;}
+}
+
+.titleBanner{  height:80px !important;overflow:hidden!important;float: left !important;
+	h2{width:100% !important;line-height: 100% !important;padding-top: 20px !important;	height:15px !important;float: left !important;
+		p{width:60% !important; line-height: 100% !important; height:15px !important; float: left !important; margin-top: -10px !important; }
+	}
+	h3{	width:30% !important; line-height: 100% !important; height:30px; padding: 0px !important; margin-top: 0px;  }
+}
+.videoBox{
+	h3{line-height: 100% !important;}
+	p{line-height: 100% !important;}
+}
+}
+.ie8{
+.socialBanner{
+	.socialIcon{ 	width:96% !important;
+	margin-left: 2% !important;
+	margin-right: 2% !important;}
+}
+.titleBanner{  height:100px !important; h3{margin-top: -60px !important; float:right !important;}}
+
+.featuredDesc{
+	a{font-size: 18px;}
+}
+
+}
+
+// --------------------------------------------------------------------------------------------------------------------- <IE7 fixes
+
+// --------------------------------------------------------------------------------------------------------------------- main content box style
+#mainContent {	
+	background-color:#FFF!important ;
+	zoom: 1;
+	overflow: hidden;	
+	width:100%;	
+	border-bottom: none;
+	display: block; 
+	clear: all;
+	//bottom padding ensures content doesn't clip footer transition	
+
+#colouredBack{
+width:100%;
+background-color:#eff6fa;
+}
+// --------------------------------------------------------------------------------------------------------------------- <IE7 fixes
+
+
+
+[data-icon]:before {
+  font-family: icons; /* BYO icon font, mapped smartly */
+  content: attr(data-icon);
+  speak: none; /* Not to be trusted, but hey. */
+}
+
+//----------------------------------------------------------------------------------------- Content
+.titleBanner{
+	padding-top:30px;
+	border-bottom: 1px solid #ccc;
+	width:96%;
+	margin-left: 2%;
+	float:left;
+	#lefter{
+		width:60%;
+		float:left;
+		@media @tablet{width:100%;}
+	}
+	h2{
+		float: left;
+		color:@highlightgreen;
+		width:60%;
+		font-size: 14px;
+		height:10px;
+		@media @tablet{width:100%;}
+		span{
+			color:@darkblue;
+			@media @tablet{width:100%;}
+		}
+	}
+	p{	
+	@media @tablet{width:100%;}		
+		width:100%;
+		font-size: 9px;
+		color:@darkgrey;
+		float:left;
+	}
+
+	h3{	
+		width:30%;
+
+		text-align: right;
+		float:right;
+		font-size: 12px;
+		font-weight: normal;
+		color:@darkgrey;
+		@media @tablet{width:100%;}
+
+		span{
+			color:#e63333;
+			font-size: 20px;
+		}
+		img{
+			text-align: left;
+		}
+	}
+}
+
+
+
+
+
+
+
+#videoBanner{
+width:100%;
+padding: 20px;
+float:left;
+@media @mobile {padding:0px;}
+
+	.featuredVideo{
+		float:left;
+		width:480px;
+		height:320px;		
+		background-color: #000;
+		@media @tablet{width:100%;}
+	}
+	.featuredDesc{
+		background-color: #FFF;
+		float:right;		
+		width:45%;
+		height: 320px;
+		padding:10px;
+		border-bottom: 1px solid #ccc;
+		@media @tablet{
+			float:left;
+			width:100%;
+			height:auto;
+			margin-top: 10px;
+		}
+
+		h2{
+			color: @bannerblue;
+			font-weight: normal;
+			font-size: 18px;
+			line-height: 100%;
+			width:100%;
+			float:left;
+			p{
+				color:@darkgrey;
+				font-size: 12px;
+			}
+		}
+
+		p{
+			font-size: 12px;
+			float:left;
+			width:100%;
+		}		
+
+		a{
+			color: @darkgrey;
+			width:10%;
+			float:left;
+			text-decoration: none;
+
+		}
+	}	
+}
+
+.otherVideos{
+	width:100%;
+	background-color: #FFF;
+	min-height: 30px;
+	float: left;
+	margin-top: 20px;
+	margin-left: 2%;
+	padding: 10px;
+@media @midway {width:100%; margin-left: 0%;}
+@media @mobile {width:100%; margin-left: 0%;}
+	
+.videoBox{
+	float:left;
+	padding: 10px;
+	width:240px;
+	text-align: center;
+	margin-left: 4.5%;
+
+@media @tablet{margin-left: 2%;}
+@media @midway {margin-left: 2%;}
+@media @mobile {margin-left: 2%;}
+
+	h3{
+		width:100%;
+		color:@bannerblue;
+		font-size: 12px;
+		line-height: 100%;
+	}
+	p{
+		font-size: 10px;
+		color:#000;
+	}
+	a{
+		text-decoration: none;
+	}
+
+}
+}
+.socialBanner{
+	margin-top: 15px;
+	//border-bottom: 1px solid #ccc;
+	width:100%;
+	float:left;
+	background-color: #FFF;
+	text-align: center;
+
+	.socialIcon{
+		padding:10px;
+		font-size:90px;
+		text-decoration: none;
+		//width:100%;
+		width:100%;
+	text-align: center;
+	font-size: 18px;
+
+	a{
+		color:@socialgrey;
+		padding:15px;	
+
+	}
+
+		:hover{
+			text-decoration: none;
+			color:@bannerblue;
+		}
+
+	}
+}
+}	

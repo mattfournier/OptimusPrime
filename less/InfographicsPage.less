@@ -1,0 +1,163 @@
+// --------------------------------------------------------------------------------------------------------------------- <IE7 fixes
+html.ie {
+
+//#lightboxOverlay {background-color: transparent!important;}
+
+
+.titleBanner{  height:80px !important;overflow:hidden!important;float: left !important;
+	h2{width:100% !important;line-height: 100% !important;padding-top: 20px !important;	height:15px !important;float: left !important;
+		p{width:60% !important; line-height: 100% !important; height:15px !important; float: left !important; margin-top: -10px !important; }
+	}
+	h3{	width:30% !important; line-height: 100% !important; height:30px; padding: 0px !important; margin-top: 0px;  }
+
+}
+}
+
+.ie8{
+
+.titleBanner{  height:100px !important; h3{margin-top: -60px !important; float:right !important;}}
+}
+
+
+// --------------------------------------------------------------------------------------------------------------------- main content box style
+#mainContent {
+	background-color:#FFF !important;
+	zoom: 1;
+	overflow: hidden;	
+	width:100%;
+	padding: 0 0 5em; 
+	border-bottom: none;
+	display: block; clear: all;
+
+
+
+//----------------------------------------------------------------------------------------- Content
+.titleBanner{
+	padding-top:30px;
+	border-bottom: 1px solid #ccc;
+	width:96%;
+	margin-left: 2%;
+	float:left;
+	#lefter{
+		width:60%;
+		float:left;
+		@media @tablet{width:100%;}
+	}
+	h2{
+		float: left;
+		color:@highlightgreen;
+		width:60%;
+		font-size: 14px;
+		//line-height: 5%;
+		height:10px;
+		@media @tablet{width:100%;}
+		span{
+			color:@darkblue;
+
+			@media @tablet{width:100%;}
+		}
+	}
+	p{	
+	@media @tablet{width:100%;}		
+		width:100%;
+		font-size: 10px;
+		color:@darkgrey;
+		float:left;
+	}
+	h3{	width:30%;
+		text-align: right;
+		float:right;
+		font-size: 12px;
+		font-weight: normal;
+		color:@darkgrey;
+		@media @tablet{width:100%;}
+		span{
+			color:#e63333;
+			font-size: 20px;
+		}
+		img{
+			text-align: left;
+		}
+	}
+}
+
+#freetile-demo{
+	margin-top: 0px;
+	padding-top: 30px;
+	margin-left: 2%;
+	margin-right: 2%;
+	float:left;
+	width:96%;
+	//display:none;
+	img{
+		cursor:pointer;
+	
+	}
+}
+.socialBanner{
+	padding-top: 5px;	
+	width:96%;
+	margin-left: 2%;
+	margin-right: 2%;
+	float:left;
+	height:auto;
+	text-align: center;
+	#promovid{border-right: 1px solid #ccc;}
+		
+	.socialIcons{
+		width:100%;
+		font-size:18px;
+		text-decoration: none;
+		text-align: left;
+		padding-bottom: 0px;
+	
+		span{
+			padding: 0px;
+			font-size: 10px;
+			//color: @darkgrey;
+			
+		}
+		a{
+			color:@darkgrey;
+			padding:15px;
+			padding-left: 5px;
+			padding-right: 5px;
+
+		}
+				:hover{
+					text-decoration: none;
+					color:@bannerblue;
+				}
+
+		
+	}
+}
+
+}
+
+
+#lightbox{
+	background-color:#eee;
+	padding: 10px;
+	border-bottom: 2px solid #666;
+	border-right: 2px solid #666;
+	}
+#lightboxDetails{
+	font-size: 0.8em;
+	padding-top: 0.4em;
+	}	
+#lightboxCaption{ float: left; }
+#keyboardMsg{ float: right; }
+#closeButton{ top: 5px; right: 5px; }
+
+#lightbox img{ border: none; clear: both;} 
+#overlay img{ border: none; }
+
+#overlay{ background-image: url(overlay.png); }
+
+* html #overlay{
+	background-color: #333;
+	background-color: transparent;
+	background-image: url(blank.gif);
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="overlay.png", sizingMethod="scale");
+	}
