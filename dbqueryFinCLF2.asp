@@ -1225,22 +1225,7 @@ sub writePreContentDetails ()
 		end if
 	end if
 
-    if sView <> "printable" Then
-	    select case inumberOfColumns
-		    case 2
-		    	%>
-		    	        <!-- #include virtual="/common/left-nav-eng.htm" -->
-		    	<%
-
-				if sDomainType <> "hrma" AND bresourceServicePagedata Then
-				    if bDisableServiceLink = true then
-					    writeDisabledServiceHomePageLink ()
-				    else
-					    writeServiceHomePageLink ()
-				    end if
-    			end if
-	    end select
-    end if
+   
 
 end sub
 
